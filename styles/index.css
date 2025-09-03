@@ -1,0 +1,200 @@
+/* 🔧 Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* 🔝 Encabezado superior */
+.top-bar {
+  background-color: #2e7d32;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 90px;
+}
+
+.social {
+  margin-left: auto;
+}
+
+.social img {
+  height: 30px;
+  margin-left: 10px;
+}
+
+/* 🧭 Navegación */
+.main-nav {
+  background-color: #388e3c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 70px;
+  margin-left: 70px;
+  
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 10px 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-right: calc(50% - 200px); /* ajusta el margen según sea necesario */
+}
+
+.main-nav li a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.main-nav li a:hover {
+  color: #c8e6c9;
+}
+
+/* 🖼️ Banner principal */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(to right, #a5d6a7, #e8f5e9);
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 🎯 Promociones */
+.promos {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 20px;
+  background-color: #ffffff;
+}
+
+.promo {
+  background-color: #66bb6a;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  width: 30%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  display: inline-block;
+}
+
+.promo:hover {
+  background: linear-gradient(90deg, #43a047);
+  transform: scale(1.07);
+  box-shadow: 0 4px 16px rgba(67,160,71,0.2);
+  cursor: pointer;
+}
+
+/* 📅 Cita */
+.cita {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #e0f2f1;
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* 📍 Sucursales */
+.sucursales {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+#mapa {
+  margin-top: 20px;
+  height: 300px;
+  background-color: #c8e6c9;
+  border-radius: 8px;
+}
+
+/* ❓ FAQ */
+.faq {
+  background-color: #f1f8e9;
+  padding: 40px 20px;
+}
+
+.faq ul {
+  list-style: none;
+}
+
+.faq li {
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* 📎 Footer */
+footer {
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  .promos {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .promo {
+    width: 100%;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-nav li {
+    margin: 10px 0;
+  }
+}
