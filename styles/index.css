@@ -144,11 +144,34 @@ body {
   text-align: center;
 }
 
+#text-info{
+  width: 300px;
+  max-width: 100%;
+  margin: auto;
+  font-style: italic;
+}
+
 #mapa {
-  margin-top: 20px;
-  height: 300px;
+  margin: 20px;
+  height: auto;
+  width: 100%;
   background-color: #c8e6c9;
   border-radius: 8px;
+  display: flex;
+}
+
+#mapa-iframe {
+  width: 600px;
+  max-width: 100%;
+  margin: auto;
+  display: block;
+}
+
+#mapa-iframe iframe {
+  width: 100%;
+  margin: 50px;
+  height: 350px;
+  display: block;
 }
 
 /* ❓ FAQ */
