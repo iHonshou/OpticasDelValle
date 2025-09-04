@@ -1,0 +1,219 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* 🔝 Encabezado superior */
+.top-bar {
+  background-color: #2e7d32;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.top-bar .social img {
+  height: 22px;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+/* 🧭 Navegación */
+.main-nav {
+  background-color: #1b5e20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.main-nav li a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.main-nav li a:hover {
+  color: #c8e6c9;
+}
+
+/* 🎥 Sección Nosotros */
+.nosotros {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+/* Bloque de imágenes */
+.imagenes {
+  position: relative;
+  flex: 1;
+}
+
+.img-principal {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  display: block;
+}
+
+.img-secundaria {
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  width: 60%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Texto */
+.texto {
+  flex: 1.2;
+}
+
+.texto h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.texto h2 .destacado {
+  color: #f9a825; /* Amarillo/naranja */
+  font-weight: 800;
+}
+
+.texto p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Lista de servicios */
+.servicios {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 30px;
+  list-style: none;
+  padding: 0;
+}
+
+.servicios li {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.servicios li::before {
+  content: "✔ ";
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+/* 🌟 Sección Misión y Visión */
+.mision-vision {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.mision, .vision {
+  flex: 1;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f9fbe7; /* verde claro */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease-in-out;
+}
+
+.mision:hover, .vision:hover {
+  transform: translateY(-5px);
+}
+
+.mision h3 span,
+.vision h3 span {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2e7d32; /* Verde fuerte */
+  display: block;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.mision p,
+.vision p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+  .nosotros {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imagenes {
+    margin-bottom: 60px;
+  }
+
+  .img-secundaria {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    margin: 20px auto 0 auto;
+    display: block;
+  }
+
+  .servicios {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .mision-vision {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .imgMision {
+  width: 10px;
+  height: 10px;
+  border-radius: 12px;
+}
+
+}
