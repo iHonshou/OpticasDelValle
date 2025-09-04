@@ -1,174 +1,201 @@
 /* 🎥 Sección de testimonios */
 .testimonios {
-  padding: 60px 20px;
-  background: #f9f9f9;
-  text-align: center;
+    padding: 60px 20px;
+    background: #f9f9f9;
+    text-align: center;
 }
 
 .testimonios h1 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 10px;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 .testimonios p {
-  font-size: 1.1rem;
-  color: #666;
+    font-size: 1.1rem;
+    color: #666;
 }
 
 .videos-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
 }
 
 .video-card {
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  padding: 20px;
-  max-width: 400px;
-  transition: transform 0.3s ease;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    transition: transform 0.3s ease;
 }
 
 .video-card:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .video-card video {
-  width: 100%;
-  border-radius: 10px;
-  outline: none;
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
 }
 
 .video-card p {
-  margin-top: 15px;
-  font-size: 0.95rem;
-  color: #444;
+    margin-top: 15px;
+    font-size: 0.95rem;
+    color: #444;
 }
 
 /* 🔧 Reset básico */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 /* 🔝 Encabezado superior */
 .top-bar {
-  background-color: #2e7d32;
-  color: white;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 90px;
+    background-color: #058bc0;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 90px;
 }
 
 .social {
-  margin-left: auto;
+    margin-left: auto;
 }
 
 .social img {
-  height: 30px;
-  margin-left: 10px;
+    margin-left: 15px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.social img:hover {
+    transform: translateY(-3px);
+}
+
+.social img {
+    height: 28px;
+    width: 28px;
+    object-fit: contain;
 }
 
 /* 🧭 Navegación */
 .main-nav {
-  background-color: #388e3c;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1500px;
-  margin: 0 auto;
+    background-color: #058bc0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
+.main-nav a:hover {
+    background-color: #023d5474;
+}
+
+
 .logo img {
-  height: 70px;
-  margin-left: 70px;
+    height: 70px;
+    transition: transform 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
 }
 
 .main-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 10px 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-right: calc(50% - 200px); /* ajusta el margen según sea necesario */
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-right: calc(50% - 200px);
+    /* ajusta el margen según sea necesario */
 }
 
 .main-nav li a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-  transition: color 0.3s;
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 .main-nav li a:hover {
-  color: #c8e6c9;
+    color: #c8e6c9;
 }
 
 /* 🖼️ Banner principal */
 .hero {
-  text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(to right, #a5d6a7, #e8f5e9);
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to right, #a5d6a7, #e8f5e9);
 }
 
 .hero h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .hero img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 /* ❓ FAQ */
 .faq {
-  background-color: #f1f8e9;
-  padding: 40px 20px;
+    background-color: #f1f8e9;
+    padding: 40px 20px;
 }
 
 .faq ul {
-  list-style: none;
+    list-style: none;
 }
 
 .faq li {
-  background-color: #ffffff;
-  margin-bottom: 10px;
-  padding: 15px;
-  border-radius: 6px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* 📎 Footer */
 footer {
-  background-color: #2e7d32;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
+    background-color: #058bc0;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
 }
 
 /* 📱 Responsivo */
 @media (max-width: 768px) {
-  .promos {
-    flex-direction: column;
-    gap: 20px;
+    .promos {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+  .videos-container {
+    grid-template-columns: 1fr;
   }
 }
