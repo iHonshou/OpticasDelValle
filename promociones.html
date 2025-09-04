@@ -1,48 +1,57 @@
-<!DOCTYPE html>
-<html lang="es">
+    <!DOCTYPE html>
+    <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ópticas del Valle - Promociones</title>
-    <link rel="stylesheet" href="./styles/promociones.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ópticas del Valle - Promociones</title>
+        <link rel="stylesheet" href="./styles/promociones.css">
+    </head>
 
-<body>
-    <!-- 🔝 Encabezado -->
-    <header>
-        <div class="top-bar">
-            <span><i class="fas fa-phone-alt"></i> Llámanos +52 771 225 6340</span>
-            <div class="social">
-            <img src="src/icon-wpp.png" alt="WhatsApp">
-            <img src="src/icon-fb.png" alt="Facebook">
-            <img src="src/icon-ig.png" alt="Instagram">
-        </div>
-        </div>
-
-        </header>
-
-        <!-- 🧭 Menú de navegación -->
-    <nav class="main-nav">
-        <div class="logo">
-            <img src="./src/Logo_Opticas_blanco_transparent.png" alt="Logo Ópticas del Valle">
-        </div>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="promociones.html">Promociones</a></li>     
-            <li><a href="testimonios.html">Testimonios</a></li>
-        </ul>
-    </nav>
+    <body>
+        <!-- 🔝 Encabezado -->
+        <header>
+            <div class="top-bar">
+                <span><i class="fas fa-phone-alt"></i> Llámanos +52 771 225 6340</span>
+                <div class="social">
 
 
-    <!-- 🎉 Banner promocional -->
+                    <a href="https://wa.me/527712256340" target="_blank">  
+                        <img src="src/icon-wpp.png" alt="WhatsApp"> </a>
+
+
+                        <a href="https://www.facebook.com/share/1Ano8Z2xnD/" target="_blank">  
+                        <img src="src/icon-fb.png" alt="Facebook"> </a>
+
+
+                        <a href="https://www.instagram.com/opticas_del_valle?igsh=MXNzc2FqdTYxamhzbg==" target="_blank">  
+                        <img src="src/icon-ig.png" alt="Instagram"> </a>
+              
+                
+            </div>
+            </div>
+
+            </header>
+
+            <!-- 🧭 Menú de navegación -->
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="./src/Logo_Opticas_blanco_transparent.png" alt="Logo Ópticas del Valle">
+            </div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="promociones.html">Promociones</a></li>     
+                <li><a href="testimonios.html">Testimonios</a></li>
+            </ul>
+        </nav>
+
+
+          <!-- 🎉 Banner promocional -->
     <section class="promo-banner">
         <h1>¡Promociones Exclusivas!</h1>
         <p>Aprovecha nuestras ofertas limitadas en lentes y accesorios de la más alta calidad</p>
         <a href="#promos" class="cta-button">Ver Ofertas <i class="fas fa-arrow-down"></i></a>
     </section>
-
-
 
     <!-- 🎁 Sección de promociones -->
     <section class="promociones" id="promos">
@@ -85,9 +94,6 @@
         </div>
     </section>
 
-
-
-
     <!-- ⏰ Sección de cuenta regresiva -->
     <section class="countdown">
         <h3>¡Estas ofertas terminan pronto!</h3>
@@ -111,9 +117,6 @@
         </div>
     </section>
 
-
-
-
     <!-- 📱 Sección de beneficios -->
     <section class="benefits">
         <h3>¿Por qué elegirnos?</h3>
@@ -124,13 +127,11 @@
                 <p>Recibe tus lentes directamente en tu domicilio sin costo adicional en compras mayores a $799.</p>
             </div>
 
-
             <div class="feature">
                 <i class="fas fa-shield-alt"></i>
                 <h4>Garantía Extendida</h4>
                 <p>Todos nuestros productos incluyen garantía de 2 años contra defectos de fabricación.</p>
             </div>
-
             
             <div class="feature">
                 <i class="fas fa-credit-card"></i>
@@ -140,60 +141,58 @@
         </div>
     </section>
 
-
-
-
     <!-- 📎 Footer -->
     <footer class="site-footer">
         <p>&copy; 2024 Ópticas del Valle. Todos los derechos reservados.</p>
     </footer>
 
-    <script>
-        // Reloj cuenta regresiva
-        function updateCountdown() {
-            const days = document.getElementById('days');
-            const hours = document.getElementById('hours');
-            const minutes = document.getElementById('minutes');
-            const seconds = document.getElementById('seconds');
-            
-            let daysValue = parseInt(days.textContent);
-            let hoursValue = parseInt(hours.textContent);
-            let minutesValue = parseInt(minutes.textContent);
-            let secondsValue = parseInt(seconds.textContent);
-            
-            secondsValue--;
-            
-            if (secondsValue < 0) {
-                secondsValue = 59;
-                minutesValue--;
+
+        <script>
+            // Reloj cuenta regresiva
+            function updateCountdown() {
+                const days = document.getElementById('days');
+                const hours = document.getElementById('hours');
+                const minutes = document.getElementById('minutes');
+                const seconds = document.getElementById('seconds');
                 
-                if (minutesValue < 0) {
-                    minutesValue = 59;
-                    hoursValue--;
+                let daysValue = parseInt(days.textContent);
+                let hoursValue = parseInt(hours.textContent);
+                let minutesValue = parseInt(minutes.textContent);
+                let secondsValue = parseInt(seconds.textContent);
+                
+                secondsValue--;
+                
+                if (secondsValue < 0) {
+                    secondsValue = 59;
+                    minutesValue--;
                     
-                    if (hoursValue < 0) {
-                        hoursValue = 23;
-                        daysValue--;
+                    if (minutesValue < 0) {
+                        minutesValue = 59;
+                        hoursValue--;
                         
-                        if (daysValue < 0) {
-                            // La oferta ha terminado
-                            daysValue = 0;
-                            hoursValue = 0;
-                            minutesValue = 0;
-                            secondsValue = 0;
-                            return;
+                        if (hoursValue < 0) {
+                            hoursValue = 23;
+                            daysValue--;
+                            
+                            if (daysValue < 0) {
+                                // La oferta ha terminado
+                                daysValue = 0;
+                                hoursValue = 0;
+                                minutesValue = 0;
+                                secondsValue = 0;
+                                return;
+                            }
                         }
                     }
                 }
+                
+                days.textContent = daysValue.toString().padStart(2, '0');
+                hours.textContent = hoursValue.toString().padStart(2, '0');
+                minutes.textContent = minutesValue.toString().padStart(2, '0');
+                seconds.textContent = secondsValue.toString().padStart(2, '0');
             }
             
-            days.textContent = daysValue.toString().padStart(2, '0');
-            hours.textContent = hoursValue.toString().padStart(2, '0');
-            minutes.textContent = minutesValue.toString().padStart(2, '0');
-            seconds.textContent = secondsValue.toString().padStart(2, '0');
-        }
-        
-        setInterval(updateCountdown, 1000);
-    </script>
-</body>
-</html>
+            setInterval(updateCountdown, 1000);
+        </script>
+    </body>
+    </html>
