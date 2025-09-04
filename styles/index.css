@@ -14,14 +14,13 @@ body {
 
 /* 🔝 Encabezado superior */
 .top-bar {
-  background-color: #2e7d32;
-  color: white;
+  background: linear-gradient(135deg, #1A3E6B 0%, #94DEFF 100%);
+  color: #d2e6fa;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 90px;
 }
 
 .social {
@@ -35,11 +34,10 @@ body {
 
 /* 🧭 Navegación */
 .main-nav {
-  background-color: #388e3c;
+  background-color: #1A3E6B;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -60,7 +58,7 @@ body {
 }
 
 .main-nav li a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   margin: 0 15px;
   font-weight: bold;
@@ -68,14 +66,15 @@ body {
 }
 
 .main-nav li a:hover {
-  color: #c8e6c9;
+  color: #8dc4ff;
 }
 
 /* 🖼️ Banner principal */
 .hero {
   text-align: center;
   padding: 40px 20px;
-  background: linear-gradient(to right, #a5d6a7, #e8f5e9);
+  background: linear-gradient(to right, #97c3f5, #d2e6fa);
+  color: #5d6d7e;
 }
 
 .hero h1 {
@@ -94,12 +93,12 @@ body {
   display: flex;
   justify-content: space-around;
   padding: 30px 20px;
-  background-color: #ffffff;
+  background-color: #d2e6fa;
 }
 
 .promo {
-  background-color: #66bb6a;
-  color: white;
+  background-color: #5b8fc6;
+  color: #d2e6fa;
   padding: 20px;
   border-radius: 8px;
   font-size: 1.2rem;
@@ -113,7 +112,8 @@ body {
 }
 
 .promo:hover {
-  background: linear-gradient(90deg, #43a047);
+  background: linear-gradient(90deg, #97c3f5, #a3d686);
+  color: #5d6d7e;
   transform: scale(1.07);
   box-shadow: 0 4px 16px rgba(67,160,71,0.2);
   cursor: pointer;
@@ -123,24 +123,14 @@ body {
 .cita {
   text-align: center;
   padding: 40px 20px;
-  background-color: #e0f2f1;
-}
-
-.btn-whatsapp {
-  background-color: #25d366;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 10px;
+  background-color: #97c3f5;
 }
 
 /* 📍 Sucursales */
 .sucursales {
   padding: 40px 20px;
-  background-color: #ffffff;
+  background-color: #d2e6fa;
+  color: #5d6d7e;
   text-align: center;
 }
 
@@ -155,7 +145,7 @@ body {
   margin: 20px;
   height: auto;
   width: 100%;
-  background-color: #c8e6c9;
+  background-color: #67b3d4;
   border-radius: 8px;
   display: flex;
 }
@@ -172,11 +162,12 @@ body {
   margin: 50px;
   height: 350px;
   display: block;
+  border: 2px solid #5b8fc6;
 }
 
 /* ❓ FAQ */
 .faq {
-  background-color: #f1f8e9;
+  background-color: #5b8fc6;
   padding: 40px 20px;
 }
 
@@ -185,17 +176,18 @@ body {
 }
 
 .faq li {
-  background-color: #ffffff;
+  background-color: #d2e6fa;
   margin-bottom: 10px;
   padding: 15px;
   border-radius: 6px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  color: #5d6d7e;
 }
 
 /* 📎 Footer */
 footer {
-  background-color: #2e7d32;
-  color: white;
+  background: linear-gradient(135deg, #1A3E6B 0%, #9A6735 100%);
+  color: #d2e6fa;
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
