@@ -88,7 +88,7 @@ body {
   position: absolute;
   bottom: -40px;
   left: -40px;
-  width: 60%;
+  width: 40%;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
@@ -179,6 +179,18 @@ body {
   text-align: justify;
 }
 
+/* 🌟 Estilos para imágenes en Misión y Visión */
+.mision img, .vision img {
+  width: 350px; /* Tamaño inicial */
+  height: auto;
+  margin-top: 10px;
+  border-radius: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+
 /* Responsivo */
 @media (max-width: 992px) {
   .nosotros {
@@ -209,11 +221,8 @@ body {
     gap: 40px;
     text-align: center;
   }
-
-  .imgMision {
-  width: 10px;
-  height: 10px;
-  border-radius: 12px;
-}
-
+  
+  .mision img, .vision img {
+    width: 120px; /* Tamaño más pequeño en dispositivos móviles */
+  }
 }
