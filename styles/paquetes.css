@@ -1,17 +1,17 @@
 /* 🎥 Sección de testimonios */
-.testimonios {
+.paquetes {
   padding: 60px 20px;
   background: #f9f9f9;
   text-align: center;
 }
 
-.testimonios h1 {
+.paquetes h1 {
   font-size: 2rem;
   color: #333;
   margin-bottom: 10px;
 }
 
-.testimonios p {
+.paquetes p {
   font-size: 1.1rem;
   color: #666;
 }
@@ -64,7 +64,7 @@ body {
 
 /* 🔝 Encabezado superior */
 .top-bar {
-  background-color: #2e7d32;
+  background-color: #02968A;
   color: white;
   padding: 10px 20px;
   display: flex;
