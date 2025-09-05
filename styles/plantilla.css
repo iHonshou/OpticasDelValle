@@ -41,12 +41,30 @@ body {
 }
 
 .whatsapp-link .whatsapp-img {
-  content: url("src/whatsapps.png"); /* Imagen normal */
+  content: url("../src/whatsapps.png"); /* Imagen normal */
   transition: 0.3s ease-in-out; /* Suaviza el cambio */
 }
 
 .whatsapp-link:hover .whatsapp-img {
-  content: url("src/whatsappc.png"); /* Imagen al pasar el cursor */
+  content: url("../src/whatsappc.png"); /* Imagen al pasar el cursor */
+}
+
+.facebook-link .facebook-img {
+  content: url("../src/facebooks.png"); /* Imagen normal */
+  transition: 0.3s ease-in-out; /* Suaviza el cambio */
+}
+
+.facebook-link:hover .facebook-img {
+  content: url("../src/facebookc.png"); /* Imagen al pasar el cursor */
+}
+
+.instagram-link .instagram-img {
+  content: url("../src/instagrams.png"); /* Imagen normal */
+  transition: 0.3s ease-in-out; /* Suaviza el cambio */
+}
+
+.instagram-link:hover .instagram-img {
+  content: url("../src/instagramc.png"); /* Imagen al pasar el cursor */
 }
 
 /*----------------------------------*/
@@ -139,7 +157,7 @@ body {
 .promo-banner h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
-     color: #f79c41;
+     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
