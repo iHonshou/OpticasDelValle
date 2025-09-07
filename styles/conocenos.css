@@ -6,25 +6,26 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #F8F9FA, #ffffff);
+  color: #1A3E6B;
   line-height: 1.6;
-  color: #333;
-  background-color: #fff;
 }
 
 /* 🔝 Encabezado superior */
 .top-bar {
-  background-color: #2e7d32;
+  background: linear-gradient(135deg, #1A3E6B 0%, #94DEFF 100%);
   color: white;
-  padding: 10px 20px;
+  padding: 12px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .top-bar .social img {
-  height: 22px;
+  height: 28px;
+  width: 28px;
   margin-left: 12px;
   cursor: pointer;
 }
@@ -55,8 +56,8 @@ body {
   transition: color 0.3s;
 }
 
-.main-nav li a:hover {
-  color: #c8e6c9;
+.main-nav a:hover {
+    color: #FFD166;
 }
 
 /* 🎥 Sección Nosotros */
@@ -106,7 +107,7 @@ body {
 }
 
 .texto h2 .destacado {
-  color: #f9a825; /* Amarillo/naranja */
+  color: #FFD166; /* Amarillo/naranja */
   font-weight: 800;
 }
 
@@ -132,7 +133,7 @@ body {
 
 .servicios li::before {
   content: "✔ ";
-  color: #2e7d32;
+  color: #1A3E6B;
   font-weight: bold;
 }
 
@@ -152,8 +153,8 @@ body {
   flex: 1;
   padding: 20px;
   border-radius: 12px;
-  background-color: #f9fbe7; /* verde claro */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  background-color: rgba(0,0,0,0.05);    
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
   transition: transform 0.2s ease-in-out;
 }
 
@@ -165,7 +166,8 @@ body {
 .vision h3 span {
   font-size: 2rem;
   font-weight: 800;
-  color: #2e7d32; /* Verde fuerte */
+  text-align: center;
+  color: #1A3E6B; /* Verde fuerte */
   display: block;
   margin-bottom: 15px;
   text-transform: uppercase;
@@ -190,6 +192,101 @@ body {
   margin-right: auto;
   margin-bottom: 15px;
 }
+
+/* 📎 Footer */
+.site-footer {
+  background: linear-gradient(135deg, #1A3E6B 0%, #9A6735 100%);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 1rem;
+  margin-top: 60px;
+}
+
+.aviso {
+  display: inline-block;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+/* Redes sociales en top-bar */
+.social a {
+  margin-left: 15px;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.social a:hover {
+  transform: translateY(-3px);
+}
+
+/* Menú de navegación con efectos */
+.main-nav {
+  background-color: #1A3E6B;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 10px 40px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.logo img {
+  height: 70px;
+  transition: transform 0.3s;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+}
+
+.main-nav a {
+  color: #F8F9FA;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 10px 5px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.main-nav a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFD166;
+  transition: width 0.3s;
+  border-radius: 3px;
+}
+
+.main-nav a:hover {
+  color: #FFD166;
+}
+
+.main-nav a:hover:after {
+  width: 100%;
+}
+
+.main-nav a.active {
+  color: #FFD166;
+}
+
+.main-nav a.active:after {
+  width: 100%;
+}
+
 
 /* Responsivo */
 @media (max-width: 992px) {
@@ -225,4 +322,5 @@ body {
   .mision img, .vision img {
     width: 120px; /* Tamaño más pequeño en dispositivos móviles */
   }
+
 }
