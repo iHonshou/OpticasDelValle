@@ -67,6 +67,15 @@ body {
   content: url("../src/instagramc.png"); /* Imagen al pasar el cursor */
 }
 
+.tiktok-link .tiktok-img {
+  content: url("../src/tik-toks.png"); /* Imagen normal */
+  transition: 0.3s ease-in-out; /* Suaviza el cambio */
+}
+
+.tiktok-link:hover .tiktok-img {
+  content: url("../src/tik-tokc.png"); /* Imagen al pasar el cursor */
+}
+
 /*----------------------------------*/
 
 /* 🧭 Menú de navegación */
