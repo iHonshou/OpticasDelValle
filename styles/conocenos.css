@@ -97,13 +97,14 @@ body {
 /* Texto */
 .texto {
   flex: 1.2;
+  color: #000000;
 }
 
 .texto h2 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #333;
+  color: #000000;
 }
 
 .texto h2 .destacado {
@@ -128,7 +129,7 @@ body {
 
 .servicios li {
   font-size: 0.95rem;
-  color: #333;
+  color: #000000;
 }
 
 .servicios li::before {
