@@ -12,62 +12,8 @@ body {
   color: #333;
 }
 
-/* 🔝 Encabezado superior */
-.top-bar {
-  background: linear-gradient(135deg, #1A3E6B 0%, #94DEFF 100%);
-  color: #d2e6fa;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
 
-.social {
-  margin-left: auto;
-}
 
-.social img {
-  height: 30px;
-  margin-left: 10px;
-}
-
-/* 🧭 Navegación */
-.main-nav {
-  background-color: #1A3E6B;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-
-.logo img {
-  height: 70px;
-  margin-left: 70px;
-  
-}
-
-.main-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 10px 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-right: calc(50% - 200px); /* ajusta el margen según sea necesario */
-}
-
-.main-nav li a {
-  color: #ffffff;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.main-nav li a:hover {
-  color: #8dc4ff;
-}
 
 /* 🖼️ Banner principal */
 .hero {

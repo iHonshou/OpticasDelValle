@@ -1,0 +1,211 @@
+/* 🎨 Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🎨 Estilos base */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #F8F9FA, #ffffff);
+    color: #1A3E6B;
+    line-height: 1.6;
+}
+
+/* 🔝 Encabezado */
+.top-bar {
+    background: linear-gradient(135deg, #1A3E6B 0%, #94DEFF 100%);
+    color: white;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.social a {
+    margin-left: 15px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.social a:hover {
+    transform: translateY(-3px);
+}
+
+.social img {
+    height: 28px;
+    width: 28px;
+    object-fit: contain;
+}
+
+.whatsapp-link .whatsapp-img {
+  content: url("../src/whatsapps.png"); /* Imagen normal */
+  transition: 0.3s ease-in-out; /* Suaviza el cambio */
+}
+
+.whatsapp-link:hover .whatsapp-img {
+  content: url("../src/whatsappc.png"); /* Imagen al pasar el cursor */
+}
+
+.facebook-link .facebook-img {
+  content: url("../src/facebooks.png"); /* Imagen normal */
+  transition: 0.3s ease-in-out; /* Suaviza el cambio */
+}
+
+.facebook-link:hover .facebook-img {
+  content: url("../src/facebookc.png"); /* Imagen al pasar el cursor */
+}
+
+.instagram-link .instagram-img {
+  content: url("../src/instagrams.png"); /* Imagen normal */
+  transition: 0.3s ease-in-out; /* Suaviza el cambio */
+}
+
+.instagram-link:hover .instagram-img {
+  content: url("../src/instagramc.png"); /* Imagen al pasar el cursor */
+}
+
+/*----------------------------------*/
+
+/* 🧭 Menú de navegación */
+.main-nav {
+    background-color: #1A3E6B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 40px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.logo img {
+    height: 70px;
+    transition: transform 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.main-nav a {
+    color: #F8F9FA;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 10px 5px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.main-nav a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFD166;
+    transition: width 0.3s;
+    border-radius: 3px;
+}
+
+.main-nav a:hover {
+    color: #FFD166;
+}
+
+.main-nav a:hover:after {
+    width: 100%;
+}
+
+.main-nav a.active {
+    color: #FFD166;
+}
+
+.main-nav a.active:after {
+    width: 100%;
+}
+
+/*--------------------------------------------*/
+
+/* 🎉 Banner promocional */
+.promo-banner {
+    background: linear-gradient(rgba(193, 202, 213, 0.8), rgba(69, 108, 156, 0.8)), 
+        url('../src/ojo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.promo-banner h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+     color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.promo-banner p {
+    font-size: 1.5rem;
+    max-width: 900px;
+    margin-bottom: 30px;
+    font-style: oblique;
+     color: #f9d852;
+    border-bottom: #f9d852 3px solid;
+    padding: 0 10px;
+}
+/*--------------------------------------------*/
+
+/* 📎 Footer */
+.site-footer {
+    background: linear-gradient(135deg, #1A3E6B 0%, #9A6735 100%);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 1rem;
+    margin-top: 60px;
+}
+/*----------------------------------------------*/
+
+/* 🔔 Responsive */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .main-nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .promo-banner h1 {
+        font-size: 2.5rem;
+    }
+    
+    .promo-banner p {
+        font-size: 1.2rem;
+    }
+    
+    .timer {
+        flex-wrap: wrap;
+    }
+}
