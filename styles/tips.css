@@ -1,0 +1,772 @@
+/* 🎨 Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🎨 Estilos base */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #F8F9FA, #ffffff);
+    color: #1A3E6B;
+    line-height: 1.6;
+}
+
+/* 🎨 Estilos para la sección de tips interactivos */
+
+/* 👁️ Banner de tips */
+.tips-banner {
+    background: linear-gradient(rgba(26, 62, 107, 0.8), rgba(26, 62, 107, 0.9)), url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+}
+
+.tips-banner h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.tips-banner p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    background-color: #FF6B35;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #9A6735;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* 💡 Sección de tips interactivos */
+.tips-interactivos {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tips-interactivos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #1A3E6B;
+    position: relative;
+    display: inline-block;
+}
+
+.tips-interactivos h2:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #FF6B35, transparent);
+    bottom: -10px;
+    left: 25%;
+    border-radius: 2px;
+}
+
+.tips-interactivos > p {
+    font-size: 1.2rem;
+    color: #9E9E9E;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tips-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.tip-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    width: 350px;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+    padding: 25px;
+}
+
+.tip-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.tip-icon {
+    font-size: 2.5rem;
+    color: #1A3E6B;
+    margin-bottom: 20px;
+}
+
+.tip-card h3 {
+    color: #1A3E6B;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+.tip-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Elementos interactivos */
+.interactive-element {
+    margin: 25px 0;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ejercicio ocular */
+.eye-tracking {
+    position: relative;
+    width: 250px;
+    height: 150px;
+}
+
+.eye-ball {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    border: 2px solid #1A3E6B;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.eye-pupil {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #1A3E6B;
+    border-radius: 50%;
+    top: 15px;
+    left: 15px;
+    transition: all 0.5s ease;
+}
+
+.track-path {
+    width: 100%;
+    height: 5px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.start-exercise {
+    background-color: #1A3E6B;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.start-exercise:hover {
+    background-color: #94DEFF;
+    color: #1A3E6B;
+}
+
+/* Simulador UV */
+.uv-slider {
+    width: 100%;
+}
+
+.slider-container {
+    margin: 20px 0;
+}
+
+.uv-intensity {
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #4CAF50, #FFC107, #F44336);
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.uv-intensity::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #1A3E6B;
+    cursor: pointer;
+}
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.uv-effect-display {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.eye-protected, .eye-unprotected {
+    text-align: center;
+}
+
+.eye-protected i {
+    color: #4CAF50;
+    font-size: 2rem;
+}
+
+.eye-unprotected i {
+    color: #F44336;
+    font-size: 2rem;
+}
+
+/* Simulador de distancia */
+.distance-simulator {
+    position: relative;
+    height: 200px;
+    width: 100%;
+}
+
+.person {
+    position: absolute;
+    left: 50px;
+    bottom: 20px;
+}
+
+.head {
+    width: 60px;
+    height: 60px;
+    background: #FFD166;
+    border-radius: 50%;
+    position: relative;
+}
+
+.eyes {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.eye {
+    width: 12px;
+    height: 12px;
+    background: #1A3E6B;
+    border-radius: 50%;
+}
+
+.screen {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    width: 80px;
+    height: 60px;
+    background: #1A3E6B;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.5s ease;
+}
+
+.distance-control {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.distance-btn {
+    background-color: #1A3E6B;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.distance-btn:hover {
+    background-color: #94DEFF;
+}
+
+#distanceValue {
+    font-weight: bold;
+    color: #1A3E6B;
+}
+
+.tip-info {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.tip-info p {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+/* Quiz visual */
+.quiz-visual {
+    background: linear-gradient(135deg, #1A3E6B 0%, #94DEFF 100%);
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+}
+
+.quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.quiz-visual h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.quiz-progress {
+    margin-bottom: 30px;
+}
+
+.progress-bar {
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #FF6B35;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+}
+
+.quiz-question h4 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+.quiz-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.option-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1rem;
+}
+
+.option-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.option-btn.selected {
+    background: rgba(255, 107, 53, 0.7);
+    border-color: rgba(255, 107, 53, 0.9);
+}
+
+.option-btn.correct {
+    background: rgba(76, 175, 80, 0.7);
+    border-color: rgba(76, 175, 80, 0.9);
+}
+.option-btn.incorrect {
+    background: rgba(244, 67, 54, 0.7);
+    border-color: rgba(244, 67, 54, 0.9);
+}
+
+.quiz-feedback {
+    margin-top: 30px;
+}
+
+.feedback-correct, .feedback-incorrect {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.feedback-correct {
+    background: rgba(76, 175, 80, 0.2);
+    border: 1px solid rgba(76, 175, 80, 0.5);
+}
+
+.feedback-incorrect {
+    background: rgba(244, 67, 54, 0.2);
+    border: 1px solid rgba(244, 67, 54, 0.5);
+}
+
+.feedback-correct i {
+    color: #4CAF50;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.feedback-incorrect i {
+    color: #F44336;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.next-question {
+    background: #FF6B35;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.next-question:hover {
+    background: #9A6735;
+}
+
+.hidden {
+    display: none;
+}
+
+/* 🎥 Sección de videos y tips adicionales */
+.videos-tips {
+    padding: 60px 20px;
+    background-color: #F8F9FA;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h3 {
+    font-size: 2.2rem;
+    color: #1A3E6B;
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #9E9E9E;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.videos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.video-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+}
+
+.video-placeholder {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.video-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.video-card:hover .video-placeholder img {
+    transform: scale(1.05);
+}
+
+.video-placeholder i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.video-card:hover .video-placeholder i {
+    color: #FF6B35;
+    font-size: 4rem;
+}
+
+.video-info {
+    padding: 20px;
+}
+
+.video-info h4 {
+    color: #1A3E6B;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.video-info p {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.video-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #9E9E9E;
+}
+
+.video-meta i {
+    margin-right: 5px;
+}
+
+.additional-tips {
+    margin-bottom: 50px;
+}
+
+.additional-tips h4 {
+    text-align: center;
+    color: #1A3E6B;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.quick-tip {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: flex-start;
+    transition: transform 0.3s ease;
+}
+
+.quick-tip:hover {
+    transform: translateY(-3px);
+}
+
+.tip-number {
+    background: #1A3E6B;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.quick-tip p {
+    margin: 0;
+    color: #666;
+    line-height: 1.5;
+}
+
+.video-cta {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.video-cta p {
+    font-size: 1.2rem;
+    color: #1A3E6B;
+    margin-bottom: 20px;
+}
+
+.video-button {
+    display: inline-block;
+    background: #FF0000;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.video-button:hover {
+    background: #CC0000;
+    transform: scale(1.05);
+}
+
+.video-button i {
+    margin-right: 8px;
+}
+
+/* Modal para videos */
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-modal-content {
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.video-modal iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* 📎 Footer */
+.site-footer {
+    background-color: #1A3E6B;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tips-banner h1 {
+        font-size: 2rem;
+    }
+    
+    .tips-banner p {
+        font-size: 1rem;
+    }
+    
+    .quiz-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .videos-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .main-nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .main-nav li a {
+        padding: 10px;
+    }
+    
+    .top-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .video-modal-content {
+        width: 95%;
+    }
+    
+    .video-modal iframe {
+        height: 250px;
+    }
+}
