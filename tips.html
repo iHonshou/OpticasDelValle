@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ópticas del Valle - Tips</title>
+    <link rel="stylesheet" href="./styles/plantilla.css">
+    <link rel="stylesheet" href="./styles/tips.css">
+</head>
+
+<body>
+    
+    <header>
+        <div class="top-bar">
+            <span><i class="fas fa-phone-alt"></i> Llámanos +52 771 225 6340</span>
+            <div class="social">
+
+
+                <a href="https://wa.me/527712256340" target="_blank" class="whatsapp-link">
+                    <img src="src/whatsapps.png" alt="WhatsApp" class="whatsapp-img">
+                </a>
+
+                <a href="https://www.facebook.com/share/1Ano8Z2xnD/" target="_blank" class="facebook-link">
+                    <img src="src/facebooks.png" alt="Facebook" class="facebook-img"> </a>
+
+                <a href="https://www.instagram.com/opticas_del_valle?igsh=MXNzc2FqdTYxamhzbg==" target="_blank" class="instagram-link">
+                    <img src="src/instagrams.png" alt="Instagram" class="instagram-img"> </a>
+
+                <a href="" target="_blank" class="tiktok-link">
+                    <img src="src/tik-toks.png" alt="TikTok" class="tiktok-img"> </a>
+
+
+            </div>
+        </div>
+
+    </header>
+
+    
+    <!-- 🧭 Menú de navegación -->
+    <nav class="main-nav">
+        <div class="logo">
+            <img src="./src/Logo_Opticas_blanco_transparent.png" alt="Logo Ópticas del Valle">
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="testimonios.html">Testimonios</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="conocenos.html">Conocenos</a></li>
+        </ul>
+    </nav>
+
+    <!-- 👁️ Banner de tips -->
+    <section class="tips-banner">
+        <h1>¡Cuida Tu Vista con Nosotros!</h1>
+        <p>Descubre tips interactivos para mantener una visión saludable en tu día a día</p>
+        <a href="#tips" class="cta-button">Ver Tips <i class="fas fa-arrow-down"></i></a>
+    </section>
+
+    <!-- 💡 Sección de tips interactivos -->
+    <section class="tips-interactivos" id="tips">
+        <h2>Tips para el Cuidado Visual</h2>
+        <p>Aprende de forma divertida cómo proteger tus ojos con estos consejos interactivos</p>
+        
+        <div class="tips-container">
+            <!-- Tip 1: Ejercicios oculares -->
+            <div class="tip-card">
+                <div class="tip-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3>Ejercicios Oculares</h3>
+                <p>Realiza estos simples ejercicios para descansar tus ojos durante el día:</p>
+                
+                <div class="interactive-element">
+                    <div class="exercise-demo">
+                        <div class="eye-tracking">
+                            <div class="eye-ball">
+                                <div class="eye-pupil"></div>
+                            </div>
+                            <div class="track-path"></div>
+                            <button class="start-exercise">Iniciar Ejercicio</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tip-info">
+                    <p><strong>Beneficio:</strong> Reduce la fatiga visual y mejora el enfoque</p>
+                    <p><strong>Frecuencia:</strong> Cada 2 horas si usas pantallas</p>
+                </div>
+            </div>
+
+            <!-- Tip 2: Protección UV -->
+            <div class="tip-card">
+                <div class="tip-icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <h3>Protección UV</h3>
+                <p>Descubre por qué es crucial proteger tus ojos de los rayos UV:</p>
+                
+                <div class="interactive-element">
+                    <div class="uv-slider">
+                        <div class="slider-container">
+                            <input type="range" min="0" max="100" value="50" class="uv-intensity" id="uvSlider">
+                            <div class="slider-labels">
+                                <span>Baja</span>
+                                <span>Media</span>
+                                <span>Alta</span>
+                            </div>
+                        </div>
+                        <div class="uv-effect-display">
+                            <div class="eye-protected">
+                                <i class="fas fa-check-circle"></i>
+                                <p>Ojo protegido</p>
+                            </div>
+                            <div class="eye-unprotected">
+                                <i class="fas fa-times-circle"></i>
+                                <p>Ojo sin protección</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tip-info">
+                    <p><strong>Consejo:</strong> Usa lentes con protección UV incluso en días nublados</p>
+                    <p><strong>Daño acumulativo:</strong> Los efectos negativos se acumulan con el tiempo</p>
+                </div>
+            </div>
+
+            <!-- Tip 3: Distancia de pantallas -->
+            <div class="tip-card">
+                <div class="tip-icon">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <h3>Distancia de Pantallas</h3>
+                <p>Ajusta correctamente la distancia entre tus ojos y las pantallas:</p>
+                
+                <div class="interactive-element">
+                    <div class="distance-simulator">
+                        <div class="person">
+                            <div class="head">
+                                <div class="eyes">
+                                    <div class="eye left"></div>
+                                    <div class="eye right"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="screen" id="movableScreen">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <div class="distance-control">
+                            <button class="distance-btn" id="moveCloser">Acercar</button>
+                            <span id="distanceValue">50cm</span>
+                            <button class="distance-btn" id="moveAway">Alejar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tip-info">
+                    <p><strong>Distancia ideal:</strong> 50-70 cm para computadoras</p>
+                    <p><strong>Regla 20-20-20:</strong> Cada 20 minutos, mira a 20 pies (6m) por 20 segundos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ❓ Sección de quiz visual -->
+    <section class="quiz-visual">
+        <div class="quiz-container">
+            <h3>Pon a prueba tus conocimientos</h3>
+            <div class="quiz-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="progress-text">Pregunta 1 de 5</span>
+            </div>
+            
+            <div class="quiz-question">
+                <h4 id="currentQuestion">¿Cada cuánto tiempo debes reemplazar tus lentes?</h4>
+                <div class="quiz-options" id="quizOptions">
+                    <!-- Las opciones se generarán con JavaScript -->
+                </div>
+            </div>
+            
+            <div class="quiz-feedback hidden" id="quizFeedback">
+                <div class="feedback-correct hidden" id="correctFeedback">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>¡Correcto!</h4>
+                    <p id="correctExplanation"></p>
+                </div>
+                <div class="feedback-incorrect hidden" id="incorrectFeedback">
+                    <i class="fas fa-times-circle"></i>
+                    <h4>¡Incorrecto!</h4>
+                    <p id="incorrectExplanation"></p>
+                </div>
+                <button class="next-question" id="nextQuestionBtn">Siguiente Pregunta</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🎥 Sección de videos y tips adicionales -->
+    <section class="videos-tips">
+        <div class="section-header">
+            <h3>Más Tips en Video</h3>
+            <p>Aprende con nuestros expertos a través de estos tutoriales visuales</p>
+        </div>
+        
+        <div class="videos-container">
+            <div class="video-card">
+                <div class="video-placeholder" data-video="https://www.youtube.com/embed/6ACl8s_tBzE">
+                    <i class="fas fa-play-circle"></i>
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Ejercicios oculares">
+                </div>
+                <div class="video-info">
+                    <h4>5 Ejercicios para Descansar la Vista</h4>
+                    <p>Aprende técnicas simples para relajar tus ojos después de usar pantallas</p>
+                    <div class="video-meta">
+                        <span><i class="fas fa-clock"></i> 3:45 min</span>
+                        <span><i class="fas fa-eye"></i> 15K vistas</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="video-card">
+                <div class="video-placeholder" data-video="https://www.youtube.com/embed/6ACl8s_tBzE">
+                    <i class="fas fa-play-circle"></i>
+                    <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Cómo elegir lentes">
+                </div>
+                <div class="video-info">
+                    <h4>Cómo Elegir Tus Lentes Perfectos</h4>
+                    <p>Guía completa para seleccionar armazones según tu tipo de rostro y personalidad</p>
+                    <div class="video-meta">
+                        <span><i class="fas fa-clock"></i> 5:20 min</span>
+                        <span><i class="fas fa-eye"></i> 22K vistas</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="video-card">
+                <div class="video-placeholder" data-video="https://www.youtube.com/embed/6ACl8s_tBzE">
+                    <i class="fas fa-play-circle"></i>
+                    <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Limpieza de lentes">
+                </div>
+                <div class="video-info">
+                    <h4>Mantenimiento y Limpieza de Lentes</h4>
+                    <p>Aprende a cuidar tus lentes correctamente para que duren más tiempo</p>
+                    <div class="video-meta">
+                        <span><i class="fas fa-clock"></i> 4:15 min</span>
+                        <span><i class="fas fa-eye"></i> 18K vistas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="additional-tips">
+            <h4>Tips Rápidos para el Día a Día</h4>
+            <div class="tips-grid">
+                <div class="quick-tip">
+                    <div class="tip-number">1</div>
+                    <p>Parpadea con frecuencia cuando uses dispositivos digitales para evitar sequedad ocular</p>
+                </div>
+                <div class="quick-tip">
+                    <div class="tip-number">2</div>
+                    <p>Ajusta el brillo de tus pantallas para que sea similar al de tu entorno</p>
+                </div>
+                <div class="quick-tip">
+                    <div class="tip-number">3</div>
+                    <p>Usa lentes con filtro azul si pasas más de 4 horas frente a pantallas</p>
+                </div>
+                <div class="quick-tip">
+                    <div class="tip-number">4</div>
+                    <p>Realiza un examen visual completo al menos una vez al año</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="video-cta">
+            <p>¿Quieres ver más contenido como este?</p>
+            <a href="https://www.tiktok.com/@opticas.del.valle?_t=ZS-8zZDtrT9a5c&_r=1" target="_blank" class="video-button">
+                <i class="fab fa-youtube"></i> Localiza nuestro TicTock
+            </a>
+        </div>
+    </section>
+
+    <!-- Modal para videos -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- 📎 Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2024 Ópticas del Valle. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Datos para el quiz
+        const quizQuestions = [
+            {
+                question: "¿Cada cuánto tiempo debes reemplazar tus lentes?",
+                options: ["Cada 6 meses", "Cada 1-2 años", "Solo cuando se rompan", "Cada 5 años"],
+                correctAnswer: 1,
+                explanation: "Se recomienda un examen visual anual para detectar cambios en tu visión."
+            },
+            {
+                question: "¿Qué es la regla 20-20-20 para el cuidado visual?",
+                options: [
+                    "20 minutos de descanso cada 20 horas de uso de pantallas",
+                    "Cada 20 minutos, mirar a 20 pies de distancia durante 20 segundos",
+                    "Usar lentes con protección 20-20-20 contra rayos UV",
+                    "Parpadear 20 veces cada 20 minutos durante 20 segundos"
+                ],
+                correctAnswer: 1,
+                explanation: "La regla 20-20-20 ayuda a reducir la fatiga visual: cada 20 minutos, mira algo a 20 pies (6 metros) de distancia durante 20 segundos."
+            },
+            {
+                question: "¿Cuál es la distancia recomendada entre tus ojos y la pantalla de la computadora?",
+                options: [
+                    "20-30 cm",
+                    "30-40 cm",
+                    "50-70 cm",
+                    "Más de 1 metro"
+                ],
+                correctAnswer: 2,
+                explanation: "La distancia ideal entre tus ojos y la pantalla es de 50-70 cm para reducir la fatiga visual."
+            },
+            {
+                question: "¿Qué tipo de protección deben tener tus lentes de sol?",
+                options: [
+                    "Solo protección contra el resplandor",
+                    "Protección UV 400 o del 100% contra rayos UVA/UVB",
+                    "Cualquier lente oscuro es suficiente",
+                    "Solo es necesaria en días muy soleados"
+                ],
+                correctAnswer: 1,
+                explanation: "Los lentes de sol deben tener protección UV 400 o del 100% contra rayos UVA/UVB para proteger tus ojos adecuadamente."
+            },
+            {
+                question: "¿Qué alimentos son beneficiosos para la salud visual?",
+                options: [
+                    "Alimentos ricos en azúcar y grasas",
+                    "Alimentos ricos en vitamina A, C, E y omega-3",
+                    "Solo suplementos vitamínicos",
+                    "Cualquier alimento mientras sea orgánico"
+                ],
+                correctAnswer: 1,
+                explanation: "Los alimentos ricos en vitamina A (zanahorias), C (cítricos), E (frutos secos) y omega-3 (pescado) son beneficiosos para la salud visual."
+            }
+        ];
+
+        // Variables globales para el quiz
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        // Inicialización cuando el DOM esté cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar el quiz
+            initQuiz();
+            
+            // Configurar eventos para los elementos interactivos
+            setupInteractiveElements();
+            
+            // Configurar el modal de videos
+            setupVideoModal();
+        });
+
+        // Función para inicializar el quiz
+        function initQuiz() {
+            showQuestion();
+            
+            // Evento para el botón de siguiente pregunta
+            document.getElementById('nextQuestionBtn').addEventListener('click', nextQuestion);
+        }
+
+        // Mostrar la pregunta actual
+        function showQuestion() {
+            const question = quizQuestions[currentQuestionIndex];
+            document.getElementById('currentQuestion').textContent = question.question;
+            
+            // Actualizar barra de progreso
+            const progressPercentage = (currentQuestionIndex / quizQuestions.length) * 100;
+            document.querySelector('.progress-fill').style.width = `${progressPercentage}%`;
+            document.querySelector('.progress-text').textContent = `Pregunta ${currentQuestionIndex + 1} de ${quizQuestions.length}`;
+            
+            // Generar opciones de respuesta
+            const optionsContainer = document.getElementById('quizOptions');
+            optionsContainer.innerHTML = '';
+            
+            question.options.forEach((option, index) => {
+                const button = document.createElement('button');
+                button.className = 'option-btn';
+                button.textContent = option;
+                button.addEventListener('click', () => checkAnswer(index));
+                optionsContainer.appendChild(button);
+            });
+            
+            // Ocultar feedback
+            document.getElementById('quizFeedback').classList.add('hidden');
+        }
+
+        // Verificar la respuesta seleccionada
+        function checkAnswer(selectedIndex) {
+            const question = quizQuestions[currentQuestionIndex];
+            const options = document.querySelectorAll('.option-btn');
+            const feedback = document.getElementById('quizFeedback');
+            const correctFeedback = document.getElementById('correctFeedback');
+            const incorrectFeedback = document.getElementById('incorrectFeedback');
+            const correctExplanation = document.getElementById('correctExplanation');
+            const incorrectExplanation = document.getElementById('incorrectExplanation');
+            
+            // Deshabilitar todos los botones
+            options.forEach(btn => {
+                btn.disabled = true;
+            });
+            
+            if (selectedIndex === question.correctAnswer) {
+                // Respuesta correcta
+                options[selectedIndex].classList.add('correct');
+                correctFeedback.classList.remove('hidden');
+                incorrectFeedback.classList.add('hidden');
+                correctExplanation.textContent = question.explanation;
+                score++;
+            } else {
+                // Respuesta incorrecta
+                options[selectedIndex].classList.add('incorrect');
+                options[question.correctAnswer].classList.add('correct');
+                correctFeedback.classList.add('hidden');
+                incorrectFeedback.classList.remove('hidden');
+                incorrectExplanation.textContent = `La respuesta correcta es: ${question.options[question.correctAnswer]}. ${question.explanation}`;
+            }
+            
+            // Mostrar feedback
+            feedback.classList.remove('hidden');
+            
+            // Cambiar texto del botón si es la última pregunta
+            if (currentQuestionIndex === quizQuestions.length - 1) {
+                document.getElementById('nextQuestionBtn').textContent = 'Ver Resultados';
+            }
+        }
+
+        // Avanzar a la siguiente pregunta o mostrar resultados
+        function nextQuestion() {
+            currentQuestionIndex++;
+            
+            if (currentQuestionIndex < quizQuestions.length) {
+                showQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        // Mostrar resultados finales
+        function showResults() {
+            const quizContainer = document.querySelector('.quiz-container');
+            quizContainer.innerHTML = `
+                <h3>Resultados del Quiz</h3>
+                <div class="quiz-results">
+                    <h4>Obtuviste ${score} de ${quizQuestions.length} puntos</h4>
+                    <p>${getResultMessage()}</p>
+                    <button class="next-question" id="restartQuiz">Intentar de Nuevo</button>
+                </div>
+            `;
+            
+            document.getElementById('restartQuiz').addEventListener('click', restartQuiz);
+        }
+
+        // Obtener mensaje según el puntaje
+        function getResultMessage() {
+            const percentage = (score / quizQuestions.length) * 100;
+            
+            if (percentage >= 80) {
+                return '¡Excelente! Tienes muy buenos conocimientos sobre el cuidado visual.';
+            } else if (percentage >= 60) {
+                return '¡Buen trabajo! Sabes bastante sobre el cuidado visual, pero aún hay espacio para mejorar.';
+            } else {
+                return 'Es importante aprender más sobre el cuidado visual. ¡Sigue estos tips y mejora tu salud visual!';
+            }
+        }
+
+        // Reiniciar el quiz
+        function restartQuiz() {
+            currentQuestionIndex = 0;
+            score = 0;
+            initQuiz();
+        }
+
+        // Configurar elementos interactivos
+        function setupInteractiveElements() {
+            // Ejercicios oculares
+            const startExerciseBtn = document.querySelector('.start-exercise');
+            const eyePupil = document.querySelector('.eye-pupil');
+            
+            startExerciseBtn.addEventListener('click', function() {
+                // Animación simple para el ejercicio ocular
+                eyePupil.style.transition = 'all 1s ease';
+                eyePupil.style.left = '5px';
+                
+                setTimeout(() => {
+                    eyePupil.style.left = '25px';
+                }, 1000);
+                
+                setTimeout(() => {
+                    eyePupil.style.left = '15px';
+                }, 2000);
+                
+                this.textContent = 'Ejercicio completado';
+                this.disabled = true;
+                
+                setTimeout(() => {
+                    this.textContent = 'Iniciar Ejercicio';
+                    this.disabled = false;
+                }, 3000);
+            });
+            
+            // Controlador de distancia de pantalla
+            const moveCloserBtn = document.getElementById('moveCloser');
+            const moveAwayBtn = document.getElementById('moveAway');
+            const movableScreen = document.getElementById('movableScreen');
+            const distanceValue = document.getElementById('distanceValue');
+            
+            let distance = 50; // Valor inicial en cm
+            
+            moveCloserBtn.addEventListener('click', function() {
+                if (distance > 30) {
+                    distance -= 10;
+                    updateScreenPosition();
+                }
+            });
+            
+            moveAwayBtn.addEventListener('click', function() {
+                if (distance < 100) {
+                    distance += 10;
+                    updateScreenPosition();
+                }
+            });
+            
+            function updateScreenPosition() {
+                // Ajustar posición visual (simulación)
+                const rightPosition = 50 + (distance - 50) / 2;
+                movableScreen.style.right = `${rightPosition}px`;
+                distanceValue.textContent = `${distance}cm`;
+                
+                // Cambiar color según la distancia (feedback visual)
+                if (distance < 40) {
+                    movableScreen.style.backgroundColor = '#e74c3c';
+                } else if (distance >= 40 && distance <= 70) {
+                    movableScreen.style.backgroundColor = '#1A3E6B';
+                } else {
+                    movableScreen.style.backgroundColor = '#2ecc71';
+                }
+            }
+            
+            // Controlador de protección UV
+            const uvSlider = document.getElementById('uvSlider');
+            uvSlider.addEventListener('input', function() {
+                // Este slider es principalmente visual, no necesita funcionalidad compleja
+            });
+        }
+
+        // Configurar modal de videos
+        function setupVideoModal() {
+            const videoPlaceholders = document.querySelectorAll('.video-placeholder');
+            const videoModal = document.getElementById('videoModal');
+            const closeModal = document.getElementById('closeModal');
+            const videoFrame = document.getElementById('videoFrame');
+            
+            videoPlaceholders.forEach(placeholder => {
+                placeholder.addEventListener('click', function() {
+                    const videoUrl = this.getAttribute('data-video');
+                    videoFrame.src = videoUrl;
+                    videoModal.style.display = 'flex';
+                });
+            });
+            
+            closeModal.addEventListener('click', function() {
+                videoModal.style.display = 'none';
+                videoFrame.src = '';
+            });
+            
+            videoModal.addEventListener('click', function(e) {
+                if (e.target === videoModal) {
+                    videoModal.style.display = 'none';
+                    videoFrame.src = '';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

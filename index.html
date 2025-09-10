@@ -2,96 +2,136 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ópticas del Valle</title>
-    <link rel="stylesheet" href="./styles/plantilla.css">
-    <link rel="stylesheet" href="./styles/index.css">
-    <link rel="icon" href="./src/Logo_Opticas_normal_transparent.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ópticas del Valle</title>
+  <link rel="stylesheet" href="./styles/plantilla.css">
+  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="icon" href="./src/Logo_Opticas_normal_transparent.png">
+
+  <style>
+    /* Loader pantalla completa */
+    #loader {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #loader img {
+      width: 220px;
+      animation: shrinkLogo 2s ease forwards;
+    }
+
+    /* Animación logo de grande a pequeño */
+    @keyframes shrinkLogo {
+      0% {
+        transform: scale(5);
+        opacity: 1;
+      }
+      70% {
+        transform: scale(2.5);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(0);
+        opacity: 0;
+      }
+    }
+
+    /* Desvanece todo el loader */
+    .fade-out {
+      animation: fadeOutBg 0.8s ease forwards;
+    }
+
+    @keyframes fadeOutBg {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <!-- 🔝 Encabezado -->
-    <header>
-        <div class="top-bar">
-            <span><i class="fas fa-phone-alt"></i> Llámanos +52 771 225 6340</span>
-            <div class="social">
+  <!-- Loader con logo -->
+  <div id="loader">
+    <img src="./src/Logo_Opticas_normal_transparent.png" alt="Logo Ópticas del Valle">
+  </div>
 
-
-                <a href="https://wa.me/527712256340" target="_blank" class="whatsapp-link">
-                    <img src="src/whatsapps.png" alt="WhatsApp" class="whatsapp-img">
-                </a>
-
-
-
-                <a href="https://www.facebook.com/share/1Ano8Z2xnD/" target="_blank" class="facebook-link">
-                    <img src="src/facebooks.png" alt="Facebook" class="facebook-img"> </a>
-
-
-                <a href="https://www.instagram.com/opticas_del_valle?igsh=MXNzc2FqdTYxamhzbg==" target="_blank" class="instagram-link">
-                    <img src="src/instagrams.png" alt="Instagram" class="instagram-img"> </a>
-
-                <a href="https://www.tiktok.com/@opticas.del.valle?_t=ZS-8zZDtrT9a5c&_r=1" target="_blank" class="tiktok-link">
-                    <img src="src/tik-toks.png" alt="TikTok" class="tiktok-img"> </a>
-
-            </div>
-        </div>
-
-    </header>
-
-    <!-- 🧭 Menú de navegación -->
-    <nav class="main-nav">
-        <div class="logo">
-            <img src="./src/Logo_Opticas_blanco_transparent.png" alt="Logo Ópticas del Valle">
-        </div>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="promociones.html">Promociones</a></li>
-            <li><a href="testimonios.html">Testimonios</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="conocenos.html">Conócenos</a></li>
-        </ul>
-    </nav>
-
-
-    <!-- 🎉 Banner promocional -->
-    <section class="promo-banner">
-        <h1>Ópticas del Valle</h1>
-        <p>Comprometidos con tu salud visual</p>
-    </section>
-
-    <!-- 🖼️ Banner principal -->
-    <section class="hero">
-      <img src="src/promo-clases.png" alt="Personas con lentes 1" />
-      <img src="src/visitanos-banner.png" alt="Personas con lentes 2" />
-    </section>
-          <img style= "width: 100%;" src="src/eslogan-banner.png" alt="Personas con lentes 3" />
-
-
-    <!-- 📅 Agendar cita -->
-    <section id="cita" class="cita">
-      <a href="https://wa.me/527712206340" target="_blank" rel="noopener">
-        <img src="src/whatsapp-banner.png" alt="Agendar cita por WhatsApp" />
-      </a>
-    </section>
-
-    <!-- 📍 Sucursales -->
-    <section id="sucursales" class="sucursales">
-      <div id="info-sucursales">
-        <h2>Nuestras sucursales</h2>
-        <p>Conoce nuestras ubicaciones en el mapa</p>
+  <!-- 🔝 Encabezado -->
+  <header>
+    <div class="top-bar">
+      <span><i class="fas fa-phone-alt"></i> Llámanos +52 771 225 6340</span>
+      <div class="social">
+        <a href="https://wa.me/527712256340" target="_blank" class="whatsapp-link">
+          <img src="src/whatsapps.png" alt="WhatsApp" class="whatsapp-img">
+        </a>
+        <a href="https://www.facebook.com/share/1Ano8Z2xnD/" target="_blank" class="facebook-link">
+          <img src="src/facebooks.png" alt="Facebook" class="facebook-img"> </a>
+        <a href="https://www.instagram.com/opticas_del_valle?igsh=MXNzc2FqdTYxamhzbg==" target="_blank" class="instagram-link">
+          <img src="src/instagrams.png" alt="Instagram" class="instagram-img"> </a>
+        <a href="https://www.tiktok.com/@opticas.del.valle?_t=ZS-8zZDtrT9a5c&_r=1" target="_blank" class="tiktok-link">
+          <img src="src/tik-toks.png" alt="TikTok" class="tiktok-img"> </a>
       </div>
-      <div id="mapa">
-        <div id= "text-info">
-          <p>📍 Gómez Farias 25, Centro, 6ta Demarcación, 42700 Mixquiahuala, Hgo.</p>
-        </div>
-        <div id="mapa-iframe">
+    </div>
+  </header>
+
+  <!-- 🧭 Menú de navegación -->
+  <nav class="main-nav">
+    <div class="logo">
+      <img src="./src/Logo_Opticas_blanco_transparent.png" alt="Logo Ópticas del Valle">
+    </div>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="promociones.html">Promociones</a></li>
+      <li><a href="testimonios.html">Testimonios</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="conocenos.html">Conócenos</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🎉 Banner promocional -->
+  <section class="promo-banner">
+    <h1>Ópticas del Valle</h1>
+    <p>Comprometidos con tu salud visual</p>
+  </section>
+
+  <!-- 🖼️ Banner principal -->
+  <section class="hero">
+    <img src="src/promo-clases.png" alt="Personas con lentes 1" />
+    <img src="src/visitanos-banner.png" alt="Personas con lentes 2" />
+  </section>
+  <img style="width: 100%;" src="src/eslogan-banner.png" alt="Personas con lentes 3" />
+
+  <!-- 📅 Agendar cita -->
+  <section id="cita" class="cita">
+    <a href="https://wa.me/527712206340" target="_blank" rel="noopener">
+      <img src="src/whatsapp-banner.png" alt="Agendar cita por WhatsApp" />
+    </a>
+  </section>
+
+  <!-- 📍 Sucursales -->
+  <section id="sucursales" class="sucursales">
+    <div id="info-sucursales">
+      <h2>Nuestras sucursales</h2>
+      <p>Conoce nuestras ubicaciones en el mapa</p>
+    </div>
+    <div id="mapa">
+      <div id="text-info">
+        <p>📍 Gómez Farias 25, Centro, 6ta Demarcación, 42700 Mixquiahuala, Hgo.</p>
+      </div>
+      <div id="mapa-iframe">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d553.251723462001!2d-99.21625601363307!3d20.228518111591967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d3d72cf2b19a83%3A0x98bf01d112ad6088!2sOpticas%20Del%20Valle!5e0!3m2!1ses-419!2smx!4v1756925711428!5m2!1ses-419!2smx"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-        </div>
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-    </section>
+    </div>
+  </section>
 
   <!-- ❓ Preguntas frecuentes -->
   <section id="faq" class="faq">
@@ -115,9 +155,28 @@
     </ul>
   </section>
 
-    <!-- 📎 Footer -->
-    <footer>
-      <p>&copy; 2025 Ópticas del Valle. Todos los derechos reservados.</p>
-    </footer>
-  </body>
+  <!-- 📎 Footer -->
+  <footer>
+    <p>&copy; 2025 Ópticas del Valle. Todos los derechos reservados.</p>
+  </footer>
+
+  <audio id="intro-sound" src="./src/bell.mp3" preload="auto"></audio>
+
+  <script>
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+
+      // ✅ Solo la primera vez
+      if (!sessionStorage.getItem("loaderShown")) {
+        setTimeout(() => {
+          loader.classList.add("fade-out");
+          setTimeout(() => loader.style.display = "none", 800);
+          sessionStorage.setItem("loaderShown", "true");
+        }, 2000);
+      } else {
+        loader.style.display = "none";
+      }
+    });
+  </script>
+</body>
 </html>
