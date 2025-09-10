@@ -15,7 +15,7 @@ body {
 
 /* 🔝 Encabezado */
 .top-bar {
-    background: linear-gradient(135deg, #1A3E6B 0%, #94DEFF 100%);
+    background: linear-gradient(135deg, #08947d 0%, #08947d9d 100%);
     color: white;
     padding: 12px 20px;
     display: flex;
@@ -80,7 +80,7 @@ body {
 
 /* 🧭 Menú de navegación */
 .main-nav {
-    background-color: #1A3E6B;
+    background-color: #08947d73;
     display: flex;
     align-items: center;
     justify-content: space-between;
