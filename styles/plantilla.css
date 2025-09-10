@@ -123,13 +123,13 @@ body {
     height: 3px;
     bottom: 0;
     left: 0;
-    background-color: #FFD166;
+    background-color: #ffffff;
     transition: width 0.3s;
     border-radius: 3px;
 }
 
 .main-nav a:hover {
-    color: #FFD166;
+    color: #08947d;
 }
 
 .main-nav a:hover:after {
@@ -137,7 +137,7 @@ body {
 }
 
 .main-nav a.active {
-    color: #FFD166;
+    color: #08947d;
 }
 
 .main-nav a.active:after {
