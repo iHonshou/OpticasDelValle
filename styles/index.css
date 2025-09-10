@@ -34,12 +34,6 @@ body {
   margin: 20px;
 }
 
-/* 🎯 Promociones */
-.promos {
-  display: flex;
-  justify-content: space-around;
-  padding: 30px 20px;
-}
 
 .promo {
   background-color: #5b8fc6;
