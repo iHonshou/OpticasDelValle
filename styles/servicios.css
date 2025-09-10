@@ -1,100 +1,153 @@
 /* 🛠️ Sección de Servicios */
 .servicios {
-    padding: 60px 20px;
-    text-align: center;
-    background: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+  background: #f9f9f9;
 }
 
 .servicios h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    color: #1A3E6B;
-    position: relative;
-    display: inline-block;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #1A3E6B;
+  position: relative;
+  display: inline-block;
 }
 
 .servicios h2:after {
-    content: '';
-    position: absolute;
-    width: 50%;
-    height: 4px;
-    background: linear-gradient(to right, transparent, #ffa435, transparent);
-    bottom: -10px;
-    left: 25%;
-    border-radius: 2px;
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  background: linear-gradient(to right, transparent, #ffa435, transparent);
+  bottom: -10px;
+  left: 25%;
+  border-radius: 2px;
 }
 
 .servicios > p {
-    font-size: 1.2rem;
-    color: #9E9E9E;
-    margin-bottom: 50px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+  font-size: 1.2rem;
+  color: #9E9E9E;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* 🎴 Grid de servicios */
 .servicios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* 📦 Tarjetas */
 .servicio-card {
-    background: white;
-    border-radius: 15px;
-    padding: 25px 20px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+  border-radius: 15px;
+  padding: 25px 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .servicio-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
 /* 🖼 Imagen del servicio */
 .servicio-img img {
-    width: 100%;
-    max-height: 190px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
+  width: 100%;
+  max-height: 190px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 .servicio-card:hover .servicio-img img {
-    transform: scale(1.1); /* zoom al pasar */
+  transform: scale(1.1);
 }
 
 /* 📝 Títulos y texto */
 .servicio-card h3 {
-    font-size: 1.4rem;
-    margin: 15px 0 10px;
-    color: #1A3E6B;
+  font-size: 1.4rem;
+  margin: 15px 0 10px;
+  color: #08947d;
 }
 
 .servicio-card p {
-    font-size: 1rem;
-    color: #444;
-    margin-bottom: 20px;
-    min-height: 60px;
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 20px;
+  min-height: 60px;
 }
 
 /* 🔘 Botón */
 .btn-servicio {
-    display: inline-block;
-    background: #1A3E6B;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    transition: background 0.3s ease;
+  display: inline-block;
+  background: #ec7023;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  border: none;
+  cursor: pointer;
 }
 
 .btn-servicio:hover {
-    background: #FFD166;
-    color: #1A3E6B;
-    font-weight: bold;
+  background: #1A3E6B;
+  color: #FFD166;
+  font-weight: bold;
+}
+
+/* 🎬 Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.modal-content iframe,
+.modal-content video {
+  width: 100%;
+  max-width: 700px;   /* 📏 límite máximo horizontal */
+  max-height: 400px;  /* 📏 límite máximo vertical */
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+
+.close {
+  position: absolute;
+  top: -35px;
+  right: -30px;
+  font-size: 29px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.close:hover {
+  font-size: 32px;
+  color: red;
 }
