@@ -12,26 +12,33 @@ body {
   color: #333;
 }
 
-/* 🖼️ Banner principal */
 .hero {
   text-align: center;
   display: flex;
+  gap: 32px;
   padding: 40px 20px;
   color: #5d6d7e;
   justify-content: center;
-  
-}
-
-.hero h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  align-items: stretch;
 }
 
 .hero img {
-  max-width: 50%;
-  height: auto;
-  border-radius: 8px;
-  margin: 20px;
+  flex: 1 1 0;
+  max-width: 890px;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 0;
+}
+
+#eslogan {
+  margin-top: -20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
