@@ -41,39 +41,51 @@ body {
 }
 
 .whatsapp-link .whatsapp-img {
-  content: url("../src/whatsapps.png"); /* Imagen normal */
-  transition: 0.3s ease-in-out; /* Suaviza el cambio */
+    content: url("../src/whatsapps.png");
+    /* Imagen normal */
+    transition: 0.3s ease-in-out;
+    /* Suaviza el cambio */
 }
 
 .whatsapp-link:hover .whatsapp-img {
-  content: url("../src/whatsappc.png"); /* Imagen al pasar el cursor */
+    content: url("../src/whatsappc.png");
+    /* Imagen al pasar el cursor */
 }
 
 .facebook-link .facebook-img {
-  content: url("../src/facebooks.png"); /* Imagen normal */
-  transition: 0.3s ease-in-out; /* Suaviza el cambio */
+    content: url("../src/facebooks.png");
+    /* Imagen normal */
+    transition: 0.3s ease-in-out;
+    /* Suaviza el cambio */
 }
 
 .facebook-link:hover .facebook-img {
-  content: url("../src/facebookc.png"); /* Imagen al pasar el cursor */
+    content: url("../src/facebookc.png");
+    /* Imagen al pasar el cursor */
 }
 
 .instagram-link .instagram-img {
-  content: url("../src/instagrams.png"); /* Imagen normal */
-  transition: 0.3s ease-in-out; /* Suaviza el cambio */
+    content: url("../src/instagrams.png");
+    /* Imagen normal */
+    transition: 0.3s ease-in-out;
+    /* Suaviza el cambio */
 }
 
 .instagram-link:hover .instagram-img {
-  content: url("../src/instagramc.png"); /* Imagen al pasar el cursor */
+    content: url("../src/instagramc.png");
+    /* Imagen al pasar el cursor */
 }
 
 .tiktok-link .tiktok-img {
-  content: url("../src/tik-toks.png"); /* Imagen normal */
-  transition: 0.3s ease-in-out; /* Suaviza el cambio */
+    content: url("../src/tik-toks.png");
+    /* Imagen normal */
+    transition: 0.3s ease-in-out;
+    /* Suaviza el cambio */
 }
 
 .tiktok-link:hover .tiktok-img {
-  content: url("../src/tik-tokc.png"); /* Imagen al pasar el cursor */
+    content: url("../src/tik-tokc.png");
+    /* Imagen al pasar el cursor */
 }
 
 /*----------------------------------*/
@@ -146,30 +158,55 @@ body {
 
 /*--------------------------------------------*/
 
-/* 🎉 Banner promocional */
 .promo-banner {
-    background: linear-gradient(rgba(193, 202, 213, 0.8), rgba(69, 108, 156, 0.8)), 
-        url('../src/ojo.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-   
-    padding: 20px;
+  position: relative;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 20px;
 }
 
-.promo-banner h1 {
+/* Video de fondo */
+.promo-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Gradiente encima del video */
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Gradiente de arriba hacia abajo, semi-transparente */
+  background: linear-gradient(rgba(193,202,213,0.8), rgba(69,108,156,0.8));
+  z-index: 1;
+}
+
+/* Contenido encima del video y gradiente */
+.promo-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.promo-content h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
      color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-.promo-banner p {
+.promo-content p {
     font-size: 1.5rem;
     max-width: 900px;
     margin-bottom: 30px;
@@ -178,6 +215,9 @@ body {
     border-bottom: #f9d852 3px solid;
     padding: 0 10px;
 }
+
+
+
 /*--------------------------------------------*/
 
 /* 📎 Footer */
@@ -189,31 +229,169 @@ body {
     font-size: 1rem;
     margin-top: 60px;
 }
+
 /*----------------------------------------------*/
 
-/* 🔔 Responsive */
+/* ================================
+   📱 Responsivo Global
+   ================================ */
+
+/* ===== Tablets (≤ 1024px) ===== */
+@media (max-width: 1024px) {
+
+  /* 🔝 Encabezado */
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .top-bar span {
+    margin-left: 20px;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .main-nav ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+
+  .main-nav li a {
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  /* INDEX */
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .hero img { height: auto; }
+  #eslogan {
+    font-size: 1.2rem;
+    margin: 10px auto;
+    text-align: center;
+    width: 90%;
+  }
+
+  .promos {
+    flex-direction: column;
+    align-items: center;
+  }
+  .promo { width: 100%; }
+
+  .promo-banner h1 { font-size: 2.5rem; } .promo-banner p { font-size: 1.2rem; }
+
+  #mapa {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 10px 0;
+  }
+    #mapa-iframe { width: 100%; }
+    #mapa-text { width: 100%; }
+
+  /* TESTIMONIOS */
+  .videos-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .testimonios h1 { font-size: 1.8rem; }
+  .testimonios p { font-size: 1rem; }
+
+  /* TIPS */
+  .tips-container { gap: 20px; }
+  .tip-card {
+    width: 300px;
+    padding: 20px;
+  }
+  .tips-interactivos h2 { font-size: 2rem; }
+  .tips-interactivos > p { font-size: 1rem; }
+
+  /* SERVICIOS */
+  .servicios-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+/* ===== Móviles grandes (≤ 768px) ===== */
 @media (max-width: 768px) {
-    .main-nav {
-        flex-direction: column;
-        padding: 15px;
-    }
-    
-    .main-nav ul {
-        margin-top: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-    
-    .promo-banner h1 {
-        font-size: 2.5rem;
-    }
-    
-    .promo-banner p {
-        font-size: 1.2rem;
-    }
-    
-    .timer {
-        flex-wrap: wrap;
-    }
+
+  /* 🔝 Encabezado */
+  .top-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* INDEX */
+  .hero { padding: 15px; }
+  #eslogan { font-size: 1rem; }
+
+  /* TESTIMONIOS */
+  .videos-container { grid-template-columns: 1fr; }
+  .video-card { max-width: 100%; padding: 15px; }
+  .video-card p { font-size: 0.9rem; }
+  .testimonios { padding: 40px 15px; }
+
+  /* TIPS */
+  .tips-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tip-card {
+    width: 100%;
+    max-width: 400px;
+  }
+  .tip-card h3 { font-size: 1.4rem; }
+  .tip-card p { font-size: 0.95rem; }
+  .interactive-element { min-height: 150px; }
+
+  /* SERVICIOS */
+  .servicios-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== Móviles pequeños (≤ 480px) ===== */
+@media (max-width: 480px) {
+  body { font-size: 0.9rem; }
+
+  /* INDEX */
+  .hero { padding: 10px; }
+  .promo { font-size: 1rem; padding: 15px; }
+  #mapa-iframe iframe { height: 200px; }
+
+  /* TESTIMONIOS */
+  .testimonios h1 { font-size: 1.5rem; }
+  .testimonios p { font-size: 0.9rem; }
+  .video-card { padding: 10px; }
+  .video-card video { border-radius: 6px; }
+
+  /* TIPS */
+  .tips-banner { padding: 60px 15px; }
+  .tips-banner h1 { font-size: 1.8rem; }
+  .tips-banner p { font-size: 0.9rem; }
+  .cta-button { font-size: 1rem; padding: 12px 25px; }
+  .tip-card { padding: 15px; border-radius: 10px; }
+  .tip-icon { font-size: 2rem; margin-bottom: 15px; }
+  .tip-card h3 { font-size: 1.2rem; }
+  .tip-card p { font-size: 0.85rem; }
+
+  /* SERVICIOS */
+  .servicios h2 { font-size: 1.8rem; }
+  .servicio-card h3 { font-size: 1.2rem; }
+  .servicio-card p { font-size: 0.9rem; }
 }

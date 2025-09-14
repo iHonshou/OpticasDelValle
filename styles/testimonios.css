@@ -1,124 +1,108 @@
 /* 🎥 Sección de testimonios */
 .testimonios {
-    padding: 60px 20px;
-    background: #f9f9f9;
-    text-align: center;
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
 }
 
 .testimonios h1 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 10px;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
 }
 
 .testimonios p {
-    font-size: 1.1rem;
-    color: #666;
+  font-size: 1.1rem;
+  color: #666;
 }
 
 .videos-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
 }
 
 .video-card {
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 400px;
-    transition: transform 0.3s ease;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  transition: transform 0.3s ease;
 }
 
 .video-card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .video-card video {
-    width: 100%;
-    border-radius: 10px;
-    outline: none;
+  width: 100%;
+  border-radius: 10px;
+  outline: none;
 }
 
 .video-card p {
-    margin-top: 15px;
-    font-size: 0.95rem;
-    color: #444;
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #444;
 }
 
 /* 🔧 Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
 }
-
-
 
 /* 🖼️ Banner principal */
 .hero {
-    text-align: center;
-    padding: 40px 20px;
-    background: linear-gradient(to right, #a5d6a7, #e8f5e9);
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(to right, #a5d6a7, #e8f5e9);
 }
 
 .hero h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .hero img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 /* ❓ FAQ */
 .faq {
-    background-color: #f1f8e9;
-    padding: 40px 20px;
+  background-color: #f1f8e9;
+  padding: 40px 20px;
 }
 
 .faq ul {
-    list-style: none;
+  list-style: none;
 }
 
 .faq li {
-    background-color: #ffffff;
-    margin-bottom: 10px;
-    padding: 15px;
-    border-radius: 6px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* 📎 Footer */
 footer {
-    background-color: #058bc0;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
-}
-
-/* 📱 Responsivo */
-@media (max-width: 768px) {
-    .promos {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
-
-@media (max-width: 900px) {
-  .videos-container {
-    grid-template-columns: 1fr;
-  }
+  background-color: #058bc0;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
 }

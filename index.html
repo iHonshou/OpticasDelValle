@@ -66,9 +66,9 @@
   <!-- 🔝 Encabezado -->
   <header>
     <div class="top-bar">
-      <span><i class="fas fa-phone-alt"></i> Llámanos +52 771 225 6340</span>
+      <span><i class="fas fa-phone-alt"></i>Llámanos +52 771 220 6340</span>
       <div class="social">
-        <a href="https://wa.me/527712256340" target="_blank" class="whatsapp-link">
+        <a href="https://wa.me/527712206340" target="_blank" class="whatsapp-link">
           <img src="src/whatsapps.png" alt="WhatsApp" class="whatsapp-img">
         </a>
         <a href="https://www.facebook.com/share/1Ano8Z2xnD/" target="_blank" class="facebook-link">
@@ -87,7 +87,6 @@
       <img src="./src/Logo_Opticas_blanco_transparent.png" alt="Logo Ópticas del Valle">
     </div>
     <ul>
-      <li><a href="index.html">Inicio</a></li>
       <li><a href="tips.html">Tips</a></li>
       <li><a href="testimonios.html">Testimonios</a></li>
       <li><a href="servicios.html">Servicios</a></li>
@@ -96,10 +95,20 @@
   </nav>
 
   <!-- 🎉 Banner promocional -->
-  <section class="promo-banner">
+  <div class="promo-banner">
+  <video class="promo-video" autoplay muted loop playsinline>
+    <source src="src/video_serv_examen.mp4" type="video/mp4">
+    Tu navegador no soporta videos.
+  </video>
+
+  <div class="gradient-overlay"></div>
+  
+  <div class="promo-content">
     <h1>Ópticas del Valle</h1>
     <p>Comprometidos con tu salud visual</p>
-  </section>
+  </div>
+</div>
+
 
   <!-- 🖼️ Banner principal -->
   <section class="hero">
@@ -127,7 +136,7 @@
       </div>
       <div id="mapa-iframe">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d553.251723462001!2d-99.21625601363307!3d20.228518111591967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d3d72cf2b19a83%3A0x98bf01d112ad6088!2sOpticas%20Del%20Valle!5e0!3m2!1ses-419!2smx!4v1756925711428!5m2!1ses-419!2smx"
-          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
@@ -160,23 +169,39 @@
     <p>&copy; 2025 Ópticas del Valle. Todos los derechos reservados.</p>
   </footer>
 
-  <audio id="intro-sound" src="./src/bell.mp3" preload="auto"></audio>
+  <audio id="intro-sound" src="../src/bell.mp3" preload="auto"></audio>
 
-  <script>
-    window.addEventListener("load", () => {
-      const loader = document.getElementById("loader");
+<script>
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  const audio = document.getElementById("intro-sound");
 
-      // ✅ Solo la primera vez
-      if (!sessionStorage.getItem("loaderShown")) {
-        setTimeout(() => {
-          loader.classList.add("fade-out");
-          setTimeout(() => loader.style.display = "none", 800);
-          sessionStorage.setItem("loaderShown", "true");
-        }, 2000);
-      } else {
-        loader.style.display = "none";
-      }
+  document.body.addEventListener("click", () => {
+  audio.play().catch(err => console.log("Autoplay aún bloqueado", err));
+}, { once: true });
+
+  // Función para reproducir audio con manejo de promesa
+  const playAudio = () => {
+    audio.play().catch(err => {
+      console.log("Autoplay bloqueado. Necesita interacción del usuario.", err);
     });
-  </script>
+  };
+
+  // ✅ Solo mostrar loader la primera vez
+  if (!sessionStorage.getItem("loaderShown")) {
+    // Reproducir audio justo al mostrar el loader
+    playAudio();
+
+    setTimeout(() => {
+      loader.classList.add("fade-out");
+      setTimeout(() => loader.style.display = "none", 800);
+      sessionStorage.setItem("loaderShown", "true");
+    }, 2000);
+  } else {
+    loader.style.display = "none";
+  }
+});
+</script>
+
 </body>
 </html>
