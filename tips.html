@@ -7,6 +7,7 @@
     <title>Ópticas del Valle - Tips</title>
     <link rel="stylesheet" href="./styles/plantilla.css">
     <link rel="stylesheet" href="./styles/tips.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -207,50 +208,32 @@
 
         <div class="videos-container">
             <div class="video-card">
-                <div class="video-placeholder" data-video="https://youtube.com/shorts/pzdfKzWcZBQ?si=vEm7b12XVCZ_8LEZ">
-                    <i class="fas fa-play-circle"></i>
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                        alt="Ejercicios oculares">
+                <div class="video-thumbnail" data-video="src/Ejercicios.mp4">
+                    <div class="play-button"></div>
                 </div>
                 <div class="video-info">
                     <h4>5 Ejercicios para Descansar la Vista</h4>
                     <p>Aprende técnicas simples para relajar tus ojos después de usar pantallas</p>
-                    <div class="video-meta">
-                        <span><i class="fas fa-clock"></i> 3:45 min</span>
-                        <span><i class="fas fa-eye"></i> 15K vistas</span>
-                    </div>
                 </div>
             </div>
 
             <div class="video-card">
-                <div class="video-placeholder" data-video="https://youtube.com/shorts/2MwhzHyxZQU?si=-qlQWdRqBBvOLxTi">
-                    <i class="fas fa-play-circle"></i>
-                    <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                        alt="Cómo elegir lentes">
+                <div class="video-thumbnail" data-video="src/Seleccion.mp4">
+                    <div class="play-button"></div>
                 </div>
                 <div class="video-info">
                     <h4>Cómo Elegir Tus Lentes Perfectos</h4>
                     <p>Guía completa para seleccionar armazones según tu tipo de rostro y personalidad</p>
-                    <div class="video-meta">
-                        <span><i class="fas fa-clock"></i> 5:20 min</span>
-                        <span><i class="fas fa-eye"></i> 22K vistas</span>
-                    </div>
                 </div>
             </div>
 
             <div class="video-card">
-                <div class="video-placeholder" data-video="https://youtube.com/shorts/WlpyTbR4n10?si=Hn-GBaZj-hysof0q">
-                    <i class="fas fa-play-circle"></i>
-                    <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                        alt="Limpieza de lentes">
+                <div class="video-thumbnail" data-video="src/Limpiar .mp4">
+                    <div class="play-button"></div>
                 </div>
                 <div class="video-info">
                     <h4>Mantenimiento y Limpieza de Lentes</h4>
                     <p>Aprende a cuidar tus lentes correctamente para que duren más tiempo</p>
-                    <div class="video-meta">
-                        <span><i class="fas fa-clock"></i> 4:15 min</span>
-                        <span><i class="fas fa-eye"></i> 18K vistas</span>
-                    </div>
                 </div>
             </div>
         </div>
@@ -289,8 +272,12 @@
     <!-- Modal para videos -->
     <div class="video-modal" id="videoModal">
         <div class="video-modal-content">
-            <span class="close-modal" id="closeModal">&times;</span>
-            <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
+            <span class="close-modal" id="closeModal"><i class="fas fa-times"></i></span>
+            <div class="video-container">
+                <video id="modalVideo" controls>
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div>
         </div>
     </div>
 
@@ -571,28 +558,36 @@
 
         // Configurar modal de videos
         function setupVideoModal() {
-            const videoPlaceholders = document.querySelectorAll('.video-placeholder');
+            const videoThumbnails = document.querySelectorAll('.video-thumbnail');
             const videoModal = document.getElementById('videoModal');
             const closeModal = document.getElementById('closeModal');
-            const videoFrame = document.getElementById('videoFrame');
+            const modalVideo = document.getElementById('modalVideo');
 
-            videoPlaceholders.forEach(placeholder => {
-                placeholder.addEventListener('click', function () {
-                    const videoUrl = this.getAttribute('data-video');
-                    videoFrame.src = videoUrl;
+            videoThumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function () {
+                    const videoSrc = this.getAttribute('data-video');
+                    modalVideo.src = videoSrc;
                     videoModal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden'; // Evitar scroll en el fondo
+                    
+                    // Reproducir el video automáticamente
+                    modalVideo.play();
                 });
             });
 
             closeModal.addEventListener('click', function () {
                 videoModal.style.display = 'none';
-                videoFrame.src = '';
+                modalVideo.pause();
+                modalVideo.currentTime = 0;
+                document.body.style.overflow = 'auto'; // Restaurar scroll
             });
 
             videoModal.addEventListener('click', function (e) {
                 if (e.target === videoModal) {
                     videoModal.style.display = 'none';
-                    videoFrame.src = '';
+                    modalVideo.pause();
+                    modalVideo.currentTime = 0;
+                    document.body.style.overflow = 'auto'; // Restaurar scroll
                 }
             });
         }

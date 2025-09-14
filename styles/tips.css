@@ -533,38 +533,52 @@ body {
     transform: translateY(-5px);
 }
 
-.video-placeholder {
+.video-thumbnail {
     position: relative;
     height: 180px;
     overflow: hidden;
     cursor: pointer;
 }
 
-.video-placeholder img {
+.video-thumbnail img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s;
 }
 
-.video-card:hover .video-placeholder img {
+.video-card:hover .video-thumbnail img {
     transform: scale(1.05);
 }
 
-.video-placeholder i {
+.play-button {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3.5rem;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.3s ease;
 }
 
-.video-card:hover .video-placeholder i {
-    color: #FF6B35;
-    font-size: 4rem;
+.play-button::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid white;
+    margin-left: 3px;
+}
+
+.video-card:hover .play-button {
+    background: rgba(26, 62, 107, 0.9);
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
 .video-info {
@@ -679,41 +693,63 @@ body {
     margin-right: 8px;
 }
 
-/* Modal para videos */
+/* Modal para videos - Estilo YouTube */
 .video-modal {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
+    background: rgba(0,0,0,0.8);
+    display: none;
     justify-content: center;
     align-items: center;
+    z-index: 9998;
 }
 
 .video-modal-content {
-    width: 80%;
-    max-width: 800px;
-    position: relative;
+    position: relative;  /* 🔑 Necesario para posicionar el botón dentro */
+    max-width: 90%;
+    max-height: 80%;
 }
 
 .close-modal {
     position: absolute;
-    top: -40px;
-    right: 0;
+    top: 15px;  
+    right: 220px; 
+    font-size: 1.5rem;
     color: white;
-    font-size: 30px;
     cursor: pointer;
+    background: rgba(59, 58, 58, 0.6);
+    border-radius: 50%;
+    padding: 6px 10px;
+    transition: background 0.3s, transform 0.2s;
+    z-index: 10000;
 }
 
-.video-modal iframe {
-    width: 100%;
-    height: 450px;
-    border: none;
-    border-radius: 8px;
+.close-modal:hover {
+    background: rgba(255,255,255,0.8);
+    color: #1A3E6B;
+    transform: scale(1.1);
 }
+
+.video-container {
+    position: relative;
+    width: 70%;
+    max-height: 80vh; /* el video nunca será más alto que la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container video {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+
+
 
 /* 📎 Footer */
 .site-footer {
@@ -722,4 +758,30 @@ body {
     text-align: center;
     padding: 20px;
     margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .video-modal-content {
+        width: 95%;
+    }
+    
+    .videos-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .quiz-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .tips-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tip-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
 }
