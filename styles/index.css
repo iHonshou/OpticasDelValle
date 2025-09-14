@@ -39,6 +39,7 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 
 
@@ -51,7 +52,7 @@ body {
   font-weight: bold;
   text-align: center;
   width: 30%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
   display: inline-block;
@@ -61,7 +62,7 @@ body {
   background: linear-gradient(90deg, #97c3f5, #a3d686);
   color: #5d6d7e;
   transform: scale(1.07);
-  box-shadow: 0 4px 16px rgba(67,160,71,0.2);
+  box-shadow: 0 4px 16px rgba(67, 160, 71, 0.2);
   cursor: pointer;
 }
 
@@ -70,48 +71,68 @@ body {
   text-align: center;
   padding: 40px 20px;
   background-color: #97c3f5;
+  width: 100%;
+}
+
+.cita img {
+  width: 100%;
 }
 
 /* 📍 Sucursales */
 .sucursales {
-  padding: 40px 20px; 
+  padding: 40px 20px;
   color: #5d6d7e;
   text-align: center;
 }
 
-#text-info{
+#text-info {
   width: 300px;
   max-width: 100%;
   margin: auto;
-  color:black;
+  color: black;
   font-style: italic;
 }
 
+/* Estilo base */
+/* Estilo base (desktop) */
 #mapa {
-  margin: 20px;
-  height: auto;
+  display: flex;
+  flex-direction: row;      /* mapa y texto lado a lado */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;               /* espacio entre mapa y texto */
   width: 100%;
   background-color: #f9f9f9;
   border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
 }
 
 #mapa-iframe {
-  width: 600px;
-  max-width: 100%;
-  margin: auto;
-  display: block;
+  flex: 1 1 80%;            /* ocupa más o menos 60% del ancho */
+  max-width: 600px;
 }
 
 #mapa-iframe iframe {
   width: 100%;
-  margin: 50px;
   height: 350px;
-  display: block;
   border: 2px solid #5b8fc6;
+  border-radius: 8px;
 }
+
+/* Texto de información */
+#text-info {
+  flex: 1 1 20%;            /* ocupa el resto del espacio */
+  max-width: 400px;
+  color: black;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
 
 /* ❓ FAQ */
 .faq {
@@ -128,7 +149,7 @@ body {
   margin-bottom: 10px;
   padding: 15px;
   border-radius: 6px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   color: #5d6d7e;
 }
 
@@ -139,25 +160,4 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
-}
-
-/* 📱 Responsivo */
-@media (max-width: 768px) {
-  .promos {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .promo {
-    width: 100%;
-  }
-
-  .main-nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .main-nav li {
-    margin: 10px 0;
-  }
 }
