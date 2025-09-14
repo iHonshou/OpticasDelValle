@@ -303,11 +303,25 @@ body {
 
   /* TESTIMONIOS */
   .videos-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Tablet: 2 columnas */
     gap: 20px;
   }
-  .testimonios h1 { font-size: 1.8rem; }
-  .testimonios p { font-size: 1rem; }
+
+  .testimonios-banner h2 {
+    font-size: 2rem;
+  }
+
+  .testimonios-banner p {
+    font-size: 1.1rem;
+  }
+
+  .video-card {
+    padding: 15px;
+  }
+
+  .video-card video {
+    border-radius: 8px;
+  }
 
   /* TIPS */
   .tips-container { gap: 20px; }
@@ -343,10 +357,26 @@ body {
   #eslogan { font-size: 1rem; }
 
   /* TESTIMONIOS */
-  .videos-container { grid-template-columns: 1fr; }
-  .video-card { max-width: 100%; padding: 15px; }
-  .video-card p { font-size: 0.9rem; }
-  .testimonios { padding: 40px 15px; }
+  .videos-container {
+    grid-template-columns: 1fr; /* Móvil: 1 columna */
+    gap: 15px;
+  }
+
+  .testimonios-banner h2 {
+    font-size: 1.8rem;
+  }
+
+  .testimonios-banner p {
+    font-size: 1rem;
+  }
+
+  .video-card {
+    padding: 12px;
+  }
+
+  .video-card video {
+    border-radius: 6px;
+  }
 
   /* TIPS */
   .tips-container {
@@ -375,10 +405,21 @@ body {
   #mapa-iframe iframe { height: 200px; }
 
   /* TESTIMONIOS */
-  .testimonios h1 { font-size: 1.5rem; }
-  .testimonios p { font-size: 0.9rem; }
-  .video-card { padding: 10px; }
-  .video-card video { border-radius: 6px; }
+ .testimonios-banner h2 {
+    font-size: 1.6rem;
+  }
+
+  .testimonios-banner p {
+    font-size: 0.95rem;
+  }
+
+  .video-card {
+    padding: 10px;
+  }
+
+  .video-card video {
+    border-radius: 4px;
+  }
 
   /* TIPS */
   .tips-banner { padding: 60px 15px; }
