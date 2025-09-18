@@ -171,36 +171,36 @@
   </section>
 
   <section id="comentarios" class="comentarios-seccion">
-  <h2>Comentarios de nuestros clientes</h2>
+    <h2>Comentarios de nuestros clientes</h2>
 
-  <form id="form-comentario">
-    <input type="text" id="nombre" placeholder="Tu nombre" required>
-    <textarea id="mensaje" placeholder="Escribe tu comentario" required></textarea>
-    
-    <label>Calificación:</label>
-    <div class="rating">
-      <input type="radio" name="estrella" id="estrella5" value="5" required>
-      <label for="estrella5">★</label>
-      <input type="radio" name="estrella" id="estrella4" value="4">
-      <label for="estrella4">★</label>
-      <input type="radio" name="estrella" id="estrella3" value="3">
-      <label for="estrella3">★</label>
-      <input type="radio" name="estrella" id="estrella2" value="2">
-      <label for="estrella2">★</label>
-      <input type="radio" name="estrella" id="estrella1" value="1">
-      <label for="estrella1">★</label>
-    </div>
-    
-    <button type="submit">Enviar</button>
-  </form>
+    <form id="form-comentario">
+      <input type="text" id="nombre" placeholder="Tu nombre" required>
+      <textarea id="mensaje" placeholder="Escribe tu comentario" required></textarea>
 
-  <div id="lista-comentarios">
-    <!-- Ejemplo precargado -->
-    <div class="comentario">
-      
+      <label>Calificación:</label>
+      <div class="rating">
+        <input type="radio" name="estrella" id="estrella5" value="5" required>
+        <label for="estrella5">★</label>
+        <input type="radio" name="estrella" id="estrella4" value="4">
+        <label for="estrella4">★</label>
+        <input type="radio" name="estrella" id="estrella3" value="3">
+        <label for="estrella3">★</label>
+        <input type="radio" name="estrella" id="estrella2" value="2">
+        <label for="estrella2">★</label>
+        <input type="radio" name="estrella" id="estrella1" value="1">
+        <label for="estrella1">★</label>
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div id="lista-comentarios">
+      <!-- Ejemplo precargado -->
+      <div class="comentario">
+
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
@@ -208,6 +208,7 @@
   <!-- 📎 Footer -->
   <footer>
     <p>&copy; 2025 Ópticas del Valle. Todos los derechos reservados.</p>
+    <div id="contador-visitas-global" style="text-align:center; margin: 10px 0; font-weight:bold;"></div>
   </footer>
 
   <audio id="intro-sound" src="../src/bell.mp3" preload="auto"></audio>
@@ -271,6 +272,15 @@
         loader.style.display = "none";
       }
     });
+  </script>
+
+  <script>
+    fetch('contador.php')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("contador-visitas-global").textContent =
+          `Visitas totales a esta página: ${data}`;
+      });
   </script>
 
 
