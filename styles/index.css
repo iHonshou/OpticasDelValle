@@ -153,6 +153,97 @@ body {
   color: #5d6d7e;
 }
 
+.comentarios-seccion {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #fffafc;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  justify-content: center;
+
+}
+
+.comentarios-seccion h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#form-comentario input,
+#form-comentario textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+}
+
+#form-comentario button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+#form-comentario button:hover {
+  background-color: #0056b3;
+}
+
+/* Estrellas del formulario */
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  font-size: 28px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: gold;
+}
+
+/* Estrellas en comentarios */
+.estrellas {
+  color: gold;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.comentario {
+  border-top: 1px solid #ccc;
+  padding: 12px 0;
+}
+
+.comentario h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.comentario p {
+  margin: 5px 0;
+}
+
+
 /* 📎 Footer */
 footer {
   background: linear-gradient(135deg, #1A3E6B 0%, #9A6735 100%);

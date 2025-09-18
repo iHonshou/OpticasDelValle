@@ -13,8 +13,10 @@
     /* Loader pantalla completa */
     #loader {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background: #fff;
       display: flex;
       justify-content: center;
@@ -33,10 +35,12 @@
         transform: scale(5);
         opacity: 1;
       }
+
       70% {
         transform: scale(2.5);
         opacity: 1;
       }
+
       100% {
         transform: scale(0);
         opacity: 0;
@@ -73,7 +77,8 @@
         </a>
         <a href="https://www.facebook.com/share/1Ano8Z2xnD/" target="_blank" class="facebook-link">
           <img src="src/facebooks.png" alt="Facebook" class="facebook-img"> </a>
-        <a href="https://www.instagram.com/opticas_del_valle?igsh=MXNzc2FqdTYxamhzbg==" target="_blank" class="instagram-link">
+        <a href="https://www.instagram.com/opticas_del_valle?igsh=MXNzc2FqdTYxamhzbg==" target="_blank"
+          class="instagram-link">
           <img src="src/instagrams.png" alt="Instagram" class="instagram-img"> </a>
         <a href="https://www.tiktok.com/@opticas.del.valle?_t=ZS-8zZDtrT9a5c&_r=1" target="_blank" class="tiktok-link">
           <img src="src/tik-toks.png" alt="TikTok" class="tiktok-img"> </a>
@@ -96,18 +101,18 @@
 
   <!-- 🎉 Banner promocional -->
   <div class="promo-banner">
-  <video class="promo-video" autoplay muted loop playsinline>
-    <source src="./src/videos/vid-portada.mp4" type="video/mp4">
-    Tu navegador no soporta videos.
-  </video>
+    <video class="promo-video" autoplay muted loop playsinline>
+      <source src="./src/videos/vid-portada.mp4" type="video/mp4">
+      Tu navegador no soporta videos.
+    </video>
 
-  <div class="gradient-overlay"></div>
-  
-  <div class="promo-content">
-    <h1>Ópticas del Valle</h1>
-    <p>Comprometidos con tu salud visual</p>
+    <div class="gradient-overlay"></div>
+
+    <div class="promo-content">
+      <h1>Ópticas del Valle</h1>
+      <p>Comprometidos con tu salud visual</p>
+    </div>
   </div>
-</div>
 
 
   <!-- 🖼️ Banner principal -->
@@ -135,7 +140,8 @@
         <p>📍 Gómez Farias 25, Centro, 6ta Demarcación, 42700 Mixquiahuala, Hgo.</p>
       </div>
       <div id="mapa-iframe">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d553.251723462001!2d-99.21625601363307!3d20.228518111591967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d3d72cf2b19a83%3A0x98bf01d112ad6088!2sOpticas%20Del%20Valle!5e0!3m2!1ses-419!2smx!4v1756925711428!5m2!1ses-419!2smx"
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d553.251723462001!2d-99.21625601363307!3d20.228518111591967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d3d72cf2b19a83%3A0x98bf01d112ad6088!2sOpticas%20Del%20Valle!5e0!3m2!1ses-419!2smx!4v1756925711428!5m2!1ses-419!2smx"
           width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
@@ -164,6 +170,41 @@
     </ul>
   </section>
 
+  <section id="comentarios" class="comentarios-seccion">
+  <h2>Comentarios de nuestros clientes</h2>
+
+  <form id="form-comentario">
+    <input type="text" id="nombre" placeholder="Tu nombre" required>
+    <textarea id="mensaje" placeholder="Escribe tu comentario" required></textarea>
+    
+    <label>Calificación:</label>
+    <div class="rating">
+      <input type="radio" name="estrella" id="estrella5" value="5" required>
+      <label for="estrella5">★</label>
+      <input type="radio" name="estrella" id="estrella4" value="4">
+      <label for="estrella4">★</label>
+      <input type="radio" name="estrella" id="estrella3" value="3">
+      <label for="estrella3">★</label>
+      <input type="radio" name="estrella" id="estrella2" value="2">
+      <label for="estrella2">★</label>
+      <input type="radio" name="estrella" id="estrella1" value="1">
+      <label for="estrella1">★</label>
+    </div>
+    
+    <button type="submit">Enviar</button>
+  </form>
+
+  <div id="lista-comentarios">
+    <!-- Ejemplo precargado -->
+    <div class="comentario">
+      
+    </div>
+  </div>
+</section>
+
+
+
+
   <!-- 📎 Footer -->
   <footer>
     <p>&copy; 2025 Ópticas del Valle. Todos los derechos reservados.</p>
@@ -171,37 +212,69 @@
 
   <audio id="intro-sound" src="../src/bell.mp3" preload="auto"></audio>
 
-<script>
-window.addEventListener("load", () => {
-  const loader = document.getElementById("loader");
-  const audio = document.getElementById("intro-sound");
+  <script>
+    const form = document.getElementById('form-comentario');
+    const listaComentarios = document.getElementById('lista-comentarios');
 
-  document.body.addEventListener("click", () => {
-  audio.play().catch(err => console.log("Autoplay aún bloqueado", err));
-}, { once: true });
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-  // Función para reproducir audio con manejo de promesa
-  const playAudio = () => {
-    audio.play().catch(err => {
-      console.log("Autoplay bloqueado. Necesita interacción del usuario.", err);
+      const nombre = document.getElementById('nombre').value.trim();
+      const mensaje = document.getElementById('mensaje').value.trim();
+      const rating = document.getElementById('rating').value;
+
+      if (nombre && mensaje) {
+        const fecha = new Date().toLocaleDateString("es-ES", {
+          day: "2-digit", month: "long", year: "numeric"
+        });
+
+        const comentario = document.createElement('div');
+        comentario.classList.add('comentario');
+        comentario.innerHTML = `
+      <h4>${nombre} ${'⭐'.repeat(rating)}</h4>
+      <p>${mensaje}</p>
+      <small>${fecha}</small>
+    `;
+
+        listaComentarios.appendChild(comentario);
+        form.reset();
+      }
     });
-  };
 
-  // ✅ Solo mostrar loader la primera vez
-  if (!sessionStorage.getItem("loaderShown")) {
-    // Reproducir audio justo al mostrar el loader
-    playAudio();
+    // Loader con sonido de campana
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      const audio = document.getElementById("intro-sound");
 
-    setTimeout(() => {
-      loader.classList.add("fade-out");
-      setTimeout(() => loader.style.display = "none", 800);
-      sessionStorage.setItem("loaderShown", "true");
-    }, 2000);
-  } else {
-    loader.style.display = "none";
-  }
-});
-</script>
+      document.body.addEventListener("click", () => {
+        audio.play().catch(err => console.log("Autoplay aún bloqueado", err));
+      }, { once: true });
+
+      // Función para reproducir audio con manejo de promesa
+      const playAudio = () => {
+        audio.play().catch(err => {
+          console.log("Autoplay bloqueado. Necesita interacción del usuario.", err);
+        });
+      };
+
+      // ✅ Solo mostrar loader la primera vez
+      if (!sessionStorage.getItem("loaderShown")) {
+        // Reproducir audio justo al mostrar el loader
+        playAudio();
+
+        setTimeout(() => {
+          loader.classList.add("fade-out");
+          setTimeout(() => loader.style.display = "none", 800);
+          sessionStorage.setItem("loaderShown", "true");
+        }, 2000);
+      } else {
+        loader.style.display = "none";
+      }
+    });
+  </script>
+
+
 
 </body>
+
 </html>

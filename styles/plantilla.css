@@ -301,6 +301,8 @@ body {
     #mapa-iframe { width: 100%; }
     #mapa-text { width: 100%; }
 
+    
+
   /* TESTIMONIOS */
   .videos-container {
     grid-template-columns: repeat(2, 1fr); /* Tablet: 2 columnas */
@@ -356,6 +358,22 @@ body {
   .hero { padding: 15px; }
   #eslogan { font-size: 1rem; }
 
+  .comentarios-seccion {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  #form-comentario input,
+  #form-comentario textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .rating label {
+    font-size: 26px;
+  }
+}
+
   /* TESTIMONIOS */
   .videos-container {
     grid-template-columns: 1fr; /* Móvil: 1 columna */
@@ -393,7 +411,7 @@ body {
 
   /* SERVICIOS */
   .servicios-grid { grid-template-columns: 1fr; }
-}
+
 
 /* ===== Móviles pequeños (≤ 480px) ===== */
 @media (max-width: 480px) {
@@ -403,6 +421,33 @@ body {
   .hero { padding: 10px; }
   .promo { font-size: 1rem; padding: 15px; }
   #mapa-iframe iframe { height: 200px; }
+
+  .comentarios-seccion {
+    margin: 15px;
+    padding: 12px;
+  }
+
+  .comentarios-seccion h2 {
+    font-size: 18px;
+  }
+
+  #form-comentario button {
+    font-size: 14px;
+    padding: 10px;
+    margin-left: 41%;
+  }
+
+  .rating label {
+    font-size: 22px;
+  }
+
+  .comentario h4 {
+    font-size: 14px;
+  }
+
+  .comentario p {
+    font-size: 13px;
+  }
 
   /* TESTIMONIOS */
  .testimonios-banner h2 {
