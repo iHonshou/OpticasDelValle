@@ -194,54 +194,62 @@
       <button type="submit">Enviar</button>
     </form>
 
-    <div id="lista-comentarios">
-      <!-- Ejemplo precargado -->
-      <div class="comentario">
-
-      </div>
-    </div>
+    <div id="lista-comentarios"></div>
   </section>
-
-
-
 
   <!-- 📎 Footer -->
   <footer>
     <p>&copy; 2025 Ópticas del Valle. Todos los derechos reservados.</p>
-    <div id="contador-visitas-global" style="text-align:center; margin: 10px 0; font-weight:bold;"></div>
   </footer>
-
-  <audio id="intro-sound" src="../src/bell.mp3" preload="auto"></audio>
 
   <script>
     const form = document.getElementById('form-comentario');
     const listaComentarios = document.getElementById('lista-comentarios');
+
+    // Cargar comentarios guardados
+    let comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
+    renderComentarios();
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 
       const nombre = document.getElementById('nombre').value.trim();
       const mensaje = document.getElementById('mensaje').value.trim();
-      const rating = document.getElementById('rating').value;
+      const rating = document.querySelector('input[name="estrella"]:checked')?.value;
 
-      if (nombre && mensaje) {
+      if (nombre && mensaje && rating) {
         const fecha = new Date().toLocaleDateString("es-ES", {
           day: "2-digit", month: "long", year: "numeric"
         });
 
-        const comentario = document.createElement('div');
-        comentario.classList.add('comentario');
-        comentario.innerHTML = `
-      <h4>${nombre} ${'⭐'.repeat(rating)}</h4>
-      <p>${mensaje}</p>
-      <small>${fecha}</small>
-    `;
+        const nuevoComentario = { nombre, mensaje, rating, fecha };
+        comentarios.push(nuevoComentario);
 
-        listaComentarios.appendChild(comentario);
+        // Guardar en localStorage
+        localStorage.setItem("comentarios", JSON.stringify(comentarios));
+
+        renderComentarios();
         form.reset();
       }
     });
 
+    function renderComentarios() {
+      listaComentarios.innerHTML = "";
+      comentarios.forEach(c => {
+        const comentario = document.createElement('div');
+        comentario.classList.add('comentario');
+        comentario.innerHTML = `
+        <h4>${c.nombre}</h4>
+        <div class="estrellas">${'★'.repeat(c.rating)}${'☆'.repeat(5 - c.rating)}</div>
+        <p>${c.mensaje}</p>
+        <small>${c.fecha}</small>
+      `;
+        listaComentarios.appendChild(comentario);
+      });
+    }
+  </script>
+
+  <script>
     // Loader con sonido de campana
     window.addEventListener("load", () => {
       const loader = document.getElementById("loader");

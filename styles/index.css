@@ -224,9 +224,9 @@ body {
 /* Estrellas en comentarios */
 .estrellas {
   color: gold;
-  font-size: 18px;
-  margin: 5px 0;
+  font-size: 20px;
 }
+
 
 .comentario {
   border-top: 1px solid #ccc;
